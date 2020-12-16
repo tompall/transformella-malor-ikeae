@@ -1277,9 +1277,9 @@ GameObject:
   - component: {fileID: 1630432908}
   - component: {fileID: 1630432913}
   - component: {fileID: 1630432912}
+  - component: {fileID: 1630432911}
   - component: {fileID: 1630432915}
   - component: {fileID: 1630432914}
-  - component: {fileID: 1630432911}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1409,21 +1409,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!136 &1630432914
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1630432907}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 2
-  m_Height: 1.8
-  m_Direction: 1
-  m_Center: {x: 0, y: -550, z: 0}
---- !u!54 &1630432915
+--- !u!54 &1630432914
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1439,6 +1425,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &1630432915
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630432907}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.53
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.13, z: 0}
 --- !u!1 &2119315205
 GameObject:
   m_ObjectHideFlags: 0
