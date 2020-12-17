@@ -21,11 +21,7 @@ public class SoundHeadGaze : MonoBehaviour
             {
                 hitInfo.collider.gameObject.GetComponent<SoundTrigger>().PlaySpecificSound();
             }
-            else
-            {
-                
-                hitInfo.collider.gameObject.GetComponent<SoundTrigger>().PlayOverallSound();
-            }
+            
         }
         
     }
