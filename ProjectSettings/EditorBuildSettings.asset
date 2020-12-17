@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/scene-01.unity
-    guid: b222491b1125cd345ab594f1ea762a25
+    path: Assets/Scenes/test-01-videosappear.unity
+    guid: b27ef08c62493d848ae307493f70f78f
   m_configObjects: {}
