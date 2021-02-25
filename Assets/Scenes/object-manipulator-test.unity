@@ -513,7 +513,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: export210217
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2699092741681021261, guid: 99c06da781cd82448afb59391b40545d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 99c06da781cd82448afb59391b40545d, type: 3}
 --- !u!1 &1841949833 stripped
 GameObject:
@@ -581,3 +582,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoConstraintSelection: 1
   selectedConstraints: []
+--- !u!65 &1841949837
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841949833}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 3, z: 6}
+  m_Center: {x: -8.37, y: 0, z: 1.5}
