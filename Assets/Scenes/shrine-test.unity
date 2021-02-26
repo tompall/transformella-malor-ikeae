@@ -278,7 +278,7 @@ Transform:
   - {fileID: 1585628332}
   - {fileID: 279604980}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 11.448001, y: -173.99101, z: 0}
 --- !u!4 &279604980 stripped
 Transform:
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 292537341}
   - component: {fileID: 292537340}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: ikeality-particles-06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5299,6 +5299,18 @@ TrailRenderer:
   m_MinVertexDistance: 0.01
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &389608968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389608963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a41f2c486f1af414f8c7256c45b8d88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &389966655 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2866621852552652557, guid: 08f46f2344336b94e8bc33ae82b89d2f,
@@ -5411,6 +5423,18 @@ TrailRenderer:
   m_MinVertexDistance: 0.01
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &389966660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389966655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a41f2c486f1af414f8c7256c45b8d88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &409071009
 GameObject:
   m_ObjectHideFlags: 0
@@ -5426,7 +5450,7 @@ GameObject:
   - component: {fileID: 409071015}
   - component: {fileID: 409071014}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: ikeality-particles-03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10340,6 +10364,18 @@ TrailRenderer:
   m_MinVertexDistance: 0.01
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &413300424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413300419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a41f2c486f1af414f8c7256c45b8d88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &419453531
 GameObject:
   m_ObjectHideFlags: 0
@@ -10496,6 +10532,18 @@ TrailRenderer:
   m_MinVertexDistance: 0.01
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &437008308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437008303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a41f2c486f1af414f8c7256c45b8d88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &451250301
 GameObject:
   m_ObjectHideFlags: 0
@@ -10829,7 +10877,7 @@ GameObject:
   - component: {fileID: 762975406}
   - component: {fileID: 762975405}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: ikeality-particles-05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15646,7 +15694,7 @@ GameObject:
   - component: {fileID: 786480130}
   - component: {fileID: 786480129}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: ikeality-particles-04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20478,7 +20526,7 @@ Transform:
   - {fileID: 292537336}
   - {fileID: 530477906}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 18.268002, y: -421.71, z: -22.784}
 --- !u!1 &947764889
 GameObject:
@@ -20695,7 +20743,7 @@ Transform:
   - {fileID: 786480125}
   - {fileID: 1624374524}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 18.752, y: -279.745, z: 0}
 --- !u!4 &1062409182 stripped
 Transform:
@@ -20802,7 +20850,7 @@ GameObject:
   - component: {fileID: 1299182740}
   - component: {fileID: 1299182739}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: ikeality-particles-01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25627,14 +25675,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459759842}
-  m_LocalRotation: {x: -0, y: -0.85020703, z: -0, w: 0.5264484}
-  m_LocalPosition: {x: 6, y: -4.4, z: 11.6}
+  m_LocalRotation: {x: -0, y: -0.8502071, z: -0, w: 0.5264485}
+  m_LocalPosition: {x: 6, y: -4.3999996, z: 11.600006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1299182735}
   - {fileID: 214118035}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -116.468, z: 0}
 --- !u!1 &1481009354 stripped
 GameObject:
@@ -25748,6 +25796,18 @@ TrailRenderer:
   m_MinVertexDistance: 0.01
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &1481009359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481009354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a41f2c486f1af414f8c7256c45b8d88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1485843054 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2866621852552652557, guid: 08f46f2344336b94e8bc33ae82b89d2f,
@@ -25860,6 +25920,18 @@ TrailRenderer:
   m_MinVertexDistance: 0.01
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &1485843059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485843054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a41f2c486f1af414f8c7256c45b8d88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1585628331
 GameObject:
   m_ObjectHideFlags: 0
@@ -25875,7 +25947,7 @@ GameObject:
   - component: {fileID: 1585628337}
   - component: {fileID: 1585628333}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: ikeality-particles-02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30871,7 +30943,7 @@ Transform:
   - {fileID: 409071010}
   - {fileID: 1062409182}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 17.047, y: -242.64899, z: -0.684}
 --- !u!1 &1918170344 stripped
 GameObject:
@@ -31022,7 +31094,7 @@ Transform:
   - {fileID: 762975401}
   - {fileID: 2099341304}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 10.495001, y: -366.071, z: -20.776001}
 --- !u!1001 &2099341303
 PrefabInstance:
@@ -39595,7 +39667,7 @@ Transform:
   - {fileID: 4713875022902200855}
   - {fileID: 1400875980935268586}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &548389842227488556
 MeshRenderer:
@@ -40666,7 +40738,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &632038168742117372
 GameObject:
@@ -44634,7 +44706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652565641101}
   m_Layer: 0
-  m_Name: 1.5 (1)
+  m_Name: gallery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49753,6 +49825,7 @@ GameObject:
   - component: {fileID: 3538435584213059780}
   - component: {fileID: 599572921117052449}
   - component: {fileID: 5475731045323459157}
+  - component: {fileID: 1336190019325952053}
   m_Layer: 0
   m_Name: ikeality-05
   m_TagString: Untagged
@@ -49760,6 +49833,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1336190019325952053
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336190019325952052}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.8049927, y: 11.7980995, z: 0.56399536}
+  m_Center: {x: -219.0725, y: 18.15775, z: -304.424}
 --- !u!4 &1337719501182879059
 Transform:
   m_ObjectHideFlags: 0
@@ -57908,6 +57994,7 @@ GameObject:
   - component: {fileID: 7225844194869308829}
   - component: {fileID: 2922590920680408266}
   - component: {fileID: 9199206497423646203}
+  - component: {fileID: 2059260192399649420}
   m_Layer: 0
   m_Name: ikeality-02
   m_TagString: Untagged
@@ -57915,6 +58002,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &2059260192399649420
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059260192399649419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.600998, y: 11.649201, z: 0.51400757}
+  m_Center: {x: -217.53351, y: 20.7241, z: -282.427}
 --- !u!1 &2059348088825738115
 GameObject:
   m_ObjectHideFlags: 0
@@ -60709,7 +60809,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2313572780084928340
 GameObject:
@@ -75598,7 +75698,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3541921009495096025
 GameObject:
@@ -92042,6 +92142,7 @@ GameObject:
   - component: {fileID: 2311695336592147228}
   - component: {fileID: 1642797543450339794}
   - component: {fileID: 1203594561189491695}
+  - component: {fileID: 4773262888408303547}
   m_Layer: 0
   m_Name: ikeality-06
   m_TagString: Untagged
@@ -92049,6 +92150,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &4773262888408303547
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4773262888408303546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.5930176, y: 11.6491995, z: 5.3930054}
+  m_Center: {x: -207.8965, y: 18.2781, z: -298.8615}
 --- !u!23 &4779963137563446475
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -93347,7 +93461,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4882734724210680157
 MeshFilter:
@@ -98948,6 +99062,7 @@ GameObject:
   - component: {fileID: 630524139193310346}
   - component: {fileID: 8764253062839467463}
   - component: {fileID: 5299777918467044220}
+  - component: {fileID: 5374828935682248590}
   m_Layer: 0
   m_Name: ikeality-03
   m_TagString: Untagged
@@ -98955,6 +99070,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &5374828935682248590
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5374828935682248589}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6480103, y: 11.6491995, z: 6.691986}
+  m_Center: {x: -227.64499, y: 21.754599, z: -288}
 --- !u!4 &5377245428938160605
 Transform:
   m_ObjectHideFlags: 0
@@ -111961,6 +112089,7 @@ GameObject:
   - component: {fileID: 4880363703869168332}
   - component: {fileID: 3682694957301824782}
   - component: {fileID: 6566826849460557650}
+  - component: {fileID: 6467757223499586048}
   m_Layer: 0
   m_Name: ikeality-04
   m_TagString: Untagged
@@ -111968,6 +112097,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &6467757223499586048
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6467757223499586047}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9309845, y: 11.649199, z: 7.6089783}
+  m_Center: {x: -228.34048, y: 22.8046, z: -298.82147}
 --- !u!4 &6468341282665765431
 Transform:
   m_ObjectHideFlags: 0
@@ -121174,7 +121316,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7231316804319931514
 GameObject:
@@ -139489,6 +139631,7 @@ GameObject:
   - component: {fileID: 6787968200204187740}
   - component: {fileID: 5032653510867663060}
   - component: {fileID: 7424084988073696926}
+  - component: {fileID: 8713083385709791256}
   m_Layer: 0
   m_Name: Ikeality-01
   m_TagString: Untagged
@@ -139496,6 +139639,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8713083385709791256
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8713083385709791255}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.266983, y: 11.66694, z: 6.3519897}
+  m_Center: {x: -207.69849, y: 14.42993, z: -287.35498}
 --- !u!4 &8714115049030225967
 Transform:
   m_ObjectHideFlags: 0
