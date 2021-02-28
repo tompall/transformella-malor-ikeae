@@ -7,6 +7,7 @@ public class IkealityItem : MonoBehaviour
 {
     public ParticleSystem particles;
     public GameObject lineObject;
+    public ActivateTrail trailActivator;
     public bool lineActivated;
 
     public void Start()

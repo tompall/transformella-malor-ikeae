@@ -13,7 +13,16 @@ public class ActivateIkeality : MonoBehaviour
     private GameObject currentGazeTargetObject;
     private GameObject previousGazeTargetObject;
     private GameObject previousGazedIkeality;
+    private GameObject previousGazedIkealityComponent;
 
+
+    public static ActivateIkeality instance;
+
+
+    private void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +37,11 @@ public class ActivateIkeality : MonoBehaviour
 
         previousGazeTargetObject = currentGazeTargetObject;
 
-     //   Debug.Log(activationTimer);
+        //   Debug.Log(activationTimer);
 
         if (currentGazeTargetObject != null && currentGazeTargetObject.tag == "ikeality")
         {
-          //  Debug.Log(currentGazeTargetObject.name);
+            //  Debug.Log(currentGazeTargetObject.name);
             previousGazedIkeality = currentGazeTargetObject;
 
             if (currentGazeTargetObject.name == previousGazeTargetObject.name && currentGazeTargetObject.GetComponent<IkealityItem>().lineActivated == false)
@@ -53,15 +62,43 @@ public class ActivateIkeality : MonoBehaviour
                 previousGazedIkeality.GetComponent<IkealityItem>().particles.enableEmission = false;
             }
         }
-      //  if(currentGazeTargetObject != null && currentGazeTargetObject.tag == "ikealitycomponent")
-      //  {
-      //      Debug.Log(currentGazeTargetObject.name);
-      //  }
+        else if (currentGazeTargetObject != null && currentGazeTargetObject.tag == "ikealitycomponent")
+        {
+            Debug.Log(currentGazeTargetObject.name);
+
+            previousGazedIkealityComponent = currentGazeTargetObject;
+
+            if (currentGazeTargetObject.name == previousGazeTargetObject.name && currentGazeTargetObject.GetComponent<IkealityItemComponent>().circleActivated == false)
+            {
+                currentGazeTargetObject.GetComponent<IkealityItemComponent>().particles.enableEmission = true;
+
+                activationTimer -= Time.deltaTime;
+
+                if (activationTimer <= 0)
+                {
+                    ActivateCircle();
+                }
+            }
+            else
+            {
+                //  gazeAtIkeality = false;
+                activationTimer = activationTimeTarget;
+                previousGazedIkealityComponent.GetComponent<IkealityItemComponent>().particles.enableEmission = false;
+            }
+
+        }
         else
         {
             // gazeAtIkeality = false;
             activationTimer = activationTimeTarget;
-            previousGazedIkeality.GetComponent<IkealityItem>().particles.enableEmission = false;
+            if (previousGazedIkeality != null)
+            {
+                previousGazedIkeality.GetComponent<IkealityItem>().particles.enableEmission = false;
+            }
+            if (previousGazedIkealityComponent)
+            {
+                previousGazedIkealityComponent.GetComponent<IkealityItemComponent>().particles.enableEmission = false;
+            }
         }
         /*RaycastHit hitInfo;
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hitInfo, 20.0f))
@@ -77,16 +114,23 @@ public class ActivateIkeality : MonoBehaviour
     }
 
 
-    void ActivateIkealityItem()
+    void ActivateCircle()
     {
-       
+
+        IkealityItemComponent currentIkealityItemComponent = currentGazeTargetObject.GetComponent<IkealityItemComponent>();
+        currentIkealityItemComponent.circleActivated = true;
+        currentIkealityItemComponent.ActivateAllCircles();
+        activationTimer = activationTimeTarget;
     }
     void ActivateLine()
     {
-        currentGazeTargetObject.GetComponent<IkealityItem>().lineActivated = true;
-        currentGazeTargetObject.GetComponent<IkealityItem>().lineObject.SetActive(true);
+        IkealityItem currentIkealityItem = currentGazeTargetObject.GetComponent<IkealityItem>();
+        currentIkealityItem.lineActivated = true;
+        currentIkealityItem.lineObject.SetActive(true);
+        currentIkealityItem.lineObject.GetComponent<Animator>().SetBool("start", true);
+        currentIkealityItem.trailActivator.ActivateTrailAction();
         activationTimer = activationTimeTarget;
-        
+
     }
 
     void LogCurrentGazeTarget()

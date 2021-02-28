@@ -13,11 +13,16 @@ public class ActivateTrail : MonoBehaviour
         {
             gameObject.GetComponent<TrailRenderer>().enabled = false;
         }
-        Invoke("ActivateTrailAction", 0.2f);
+        
+    }
+    public void ActivateTrailAction()
+    {
+        StartCoroutine(ActivateTrailTimer());
     }
 
-   void ActivateTrailAction()
+   public IEnumerator ActivateTrailTimer()
     {
+        yield return new WaitForSeconds (0.8f);
         if (gameObject.GetComponent<TrailRenderer>() != null)
         {
             gameObject.GetComponent<TrailRenderer>().enabled = true;
