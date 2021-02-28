@@ -28,10 +28,11 @@ public class ActivateIkeality : MonoBehaviour
 
         previousGazeTargetObject = currentGazeTargetObject;
 
-        Debug.Log(activationTimer);
+     //   Debug.Log(activationTimer);
 
         if (currentGazeTargetObject != null && currentGazeTargetObject.tag == "ikeality")
         {
+          //  Debug.Log(currentGazeTargetObject.name);
             previousGazedIkeality = currentGazeTargetObject;
 
             if (currentGazeTargetObject.name == previousGazeTargetObject.name && currentGazeTargetObject.GetComponent<IkealityItem>().lineActivated == false)
@@ -42,9 +43,8 @@ public class ActivateIkeality : MonoBehaviour
 
                 if (activationTimer <= 0)
                 {
-                     ActivateLine();
+                    ActivateLine();
                 }
-
             }
             else
             {
@@ -53,6 +53,10 @@ public class ActivateIkeality : MonoBehaviour
                 previousGazedIkeality.GetComponent<IkealityItem>().particles.enableEmission = false;
             }
         }
+      //  if(currentGazeTargetObject != null && currentGazeTargetObject.tag == "ikealitycomponent")
+      //  {
+      //      Debug.Log(currentGazeTargetObject.name);
+      //  }
         else
         {
             // gazeAtIkeality = false;
@@ -73,12 +77,16 @@ public class ActivateIkeality : MonoBehaviour
     }
 
 
-
+    void ActivateIkealityItem()
+    {
+       
+    }
     void ActivateLine()
     {
         currentGazeTargetObject.GetComponent<IkealityItem>().lineActivated = true;
         currentGazeTargetObject.GetComponent<IkealityItem>().lineObject.SetActive(true);
         activationTimer = activationTimeTarget;
+        
     }
 
     void LogCurrentGazeTarget()

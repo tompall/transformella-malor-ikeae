@@ -13,7 +13,7 @@ public class ActivateTrail : MonoBehaviour
         {
             gameObject.GetComponent<TrailRenderer>().enabled = false;
         }
-        Invoke("ActivateTrailAction", 0.03f);
+        Invoke("ActivateTrailAction", 0.2f);
     }
 
    void ActivateTrailAction()
