@@ -1,0 +1,18 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+
+public class IkealityItem : MonoBehaviour
+{
+    public ParticleSystem particles;
+    public GameObject lineObject;
+    public bool lineActivated;
+
+    public void Start()
+    {
+        lineActivated = false;
+        particles.enableEmission = false;
+        lineObject.SetActive(false);
+    }
+}
