@@ -24,22 +24,7 @@ public class WorldAnchorManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.C))
-        {
-            SaveGame();
-        }
-        if (Input.GetKey(KeyCode.V))
-        {
-            LoadGame();
-        }
-        if (Input.GetKey(KeyCode.B))
-        {
-            ListAnchors();
-        }
-        if (Input.GetKey(KeyCode.N))
-        {
-            ResetPositioning();
-        }
+        
     }
 
     private void StoreLoaded (WorldAnchorStore store)
@@ -58,10 +43,7 @@ public class WorldAnchorManager : MonoBehaviour
         {
             Debug.Log(ids[i]);
         }
-        if(ids == null)
-        {
-            Debug.Log("No anchors in store");
-        }
+        
     }
 
     private void SaveGame()
