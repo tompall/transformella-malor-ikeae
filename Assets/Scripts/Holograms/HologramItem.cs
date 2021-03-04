@@ -1,9 +1,14 @@
-﻿using System.Collections;
+﻿using Microsoft.MixedReality.Toolkit.UI;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HologramItem : MonoBehaviour
 {
+
+  //  public PinchSlider pinchSlider;
+
+  //  public GameObject mesh;
 
     public HologramItemData ItemData;
 
@@ -11,6 +16,7 @@ public class HologramItem : MonoBehaviour
     void Start()
     {
         transform.position = new Vector3(ItemData.localPosX, ItemData.localPosY, ItemData.localPosZ);
+     //   mesh.transform.localScale = new Vector3(pinchSlider.SliderValue, pinchSlider.SliderValue, pinchSlider.SliderValue);
     }
 
     // Update is called once per frame
@@ -29,5 +35,10 @@ public class HologramItem : MonoBehaviour
         ItemData.localPosX = transform.position.x;
         ItemData.localPosY = transform.position.y;
         ItemData.localPosZ = transform.position.z;
+    }
+
+    public void SliderValueChange()
+    {
+      //  mesh.transform.localScale = new Vector3(pinchSlider.SliderValue, pinchSlider.SliderValue, pinchSlider.SliderValue);
     }
 }

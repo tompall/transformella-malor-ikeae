@@ -46,7 +46,7 @@ public class WorldAnchorManager : MonoBehaviour
         
     }
 
-    private void SaveGame()
+    public void SaveGame()
     {
         if (!savedRoot)
         {
@@ -77,8 +77,18 @@ public class WorldAnchorManager : MonoBehaviour
 
     }
 
-    
+    public void RemoveAnchor()
+    {
+        ResetPositioning();
+        var sphereAnchor = rootGameObject.GetComponent<WorldAnchor>();
+        Destroy(sphereAnchor);
+        
+    }
 
+    public void AddAnchor()
+    {
+        anchor = rootGameObject.AddComponent<WorldAnchor>();
+    }
    
 }
 
