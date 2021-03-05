@@ -5,9 +5,11 @@ using UnityEngine;
 public class IkealityItemComponent : MonoBehaviour
 {
 
-    public ParticleSystem particles;
+   // public ParticleSystem particles;
 
     public List<IkealityItemComponent> spheresToActivate;
+
+    public GameObject circleToActivate;
 
     public bool circleActivated;
 
@@ -17,7 +19,7 @@ public class IkealityItemComponent : MonoBehaviour
     {
         circleActivated = false;
 
-        particles = GetComponent<ParticleSystem>();
+        //particles = GetComponent<ParticleSystem>();
 
 
         IkealityItemComponent[] allIkealityComponentsinScene = FindObjectsOfType<IkealityItemComponent>();
@@ -30,7 +32,7 @@ public class IkealityItemComponent : MonoBehaviour
             }
         }
 
-        Invoke("DeactivateParticles", 2f);
+        
     }
     void Start()
     {
@@ -57,14 +59,10 @@ public class IkealityItemComponent : MonoBehaviour
             {
                 sphere.circleActivated = true;
             }
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.1f);
             sphere.gameObject.SetActive(true);
         }
     }
 
-    public void DeactivateParticles()
-    {
-
-        particles.enableEmission = false;
-    }
+   
 }

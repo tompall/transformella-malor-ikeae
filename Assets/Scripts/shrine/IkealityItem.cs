@@ -16,6 +16,16 @@ public class IkealityItem : MonoBehaviour
         lineActivated = false;
         particles.enableEmission = false;
         lineObject.SetActive(false);
-        ikealityItemComponentParent.SetActive(false);
+        ikealityItemComponentParent.SetActive(true);
+        SetAllArtifacts(ikealityItemComponentParent.transform, false);
+    }
+
+    public void SetAllArtifacts(Transform transform, bool value)
+    {
+        foreach (Transform child in ikealityItemComponentParent.transform)
+        {
+            child.gameObject.SetActive(value);
+
+        }
     }
 }

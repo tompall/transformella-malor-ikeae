@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ActivateIkeality : MonoBehaviour
 {
-    public float activationTimeTarget = 5f;
+    public float activationTimeTarget = 2f;
     private float activationTimer;
 
     // private bool gazeAtIkeality;
@@ -46,7 +46,7 @@ public class ActivateIkeality : MonoBehaviour
 
             if (currentGazeTargetObject.name == previousGazeTargetObject.name && currentGazeTargetObject.GetComponent<IkealityItem>().lineActivated == false)
             {
-                currentGazeTargetObject.GetComponent<IkealityItem>().particles.enableEmission = true;
+             //   currentGazeTargetObject.GetComponent<IkealityItem>().particles.enableEmission = true;
 
                 activationTimer -= Time.deltaTime;
 
@@ -59,7 +59,7 @@ public class ActivateIkeality : MonoBehaviour
             {
                 //  gazeAtIkeality = false;
                 activationTimer = activationTimeTarget;
-                previousGazedIkeality.GetComponent<IkealityItem>().particles.enableEmission = false;
+              //  previousGazedIkeality.GetComponent<IkealityItem>().particles.enableEmission = false;
             }
         }
         else if (currentGazeTargetObject != null && currentGazeTargetObject.tag == "ikealitycomponent")
@@ -70,7 +70,7 @@ public class ActivateIkeality : MonoBehaviour
 
             if (currentGazeTargetObject.name == previousGazeTargetObject.name && currentGazeTargetObject.GetComponent<IkealityItemComponent>().circleActivated == false)
             {
-                currentGazeTargetObject.GetComponent<IkealityItemComponent>().particles.enableEmission = true;
+               // currentGazeTargetObject.GetComponent<IkealityItemComponent>().particles.enableEmission = true;
 
                 activationTimer -= Time.deltaTime;
 
@@ -83,7 +83,7 @@ public class ActivateIkeality : MonoBehaviour
             {
                 //  gazeAtIkeality = false;
                 activationTimer = activationTimeTarget;
-                previousGazedIkealityComponent.GetComponent<IkealityItemComponent>().particles.enableEmission = false;
+             //   previousGazedIkealityComponent.GetComponent<IkealityItemComponent>().particles.enableEmission = false;
             }
 
         }
@@ -93,11 +93,11 @@ public class ActivateIkeality : MonoBehaviour
             activationTimer = activationTimeTarget;
             if (previousGazedIkeality != null)
             {
-                previousGazedIkeality.GetComponent<IkealityItem>().particles.enableEmission = false;
+             //   previousGazedIkeality.GetComponent<IkealityItem>().particles.enableEmission = false;
             }
             if (previousGazedIkealityComponent)
             {
-                previousGazedIkealityComponent.GetComponent<IkealityItemComponent>().particles.enableEmission = false;
+             //   previousGazedIkealityComponent.GetComponent<IkealityItemComponent>().particles.enableEmission = false;
             }
         }
         /*RaycastHit hitInfo;
@@ -120,6 +120,7 @@ public class ActivateIkeality : MonoBehaviour
         IkealityItemComponent currentIkealityItemComponent = currentGazeTargetObject.GetComponent<IkealityItemComponent>();
         currentIkealityItemComponent.circleActivated = true;
         currentIkealityItemComponent.ActivateAllCircles();
+        currentIkealityItemComponent.circleToActivate.SetActive(true);
         activationTimer = activationTimeTarget;
     }
     void ActivateLine()
@@ -129,7 +130,7 @@ public class ActivateIkeality : MonoBehaviour
         currentIkealityItem.lineObject.SetActive(true);
         currentIkealityItem.lineObject.GetComponent<Animator>().SetBool("start", true);
         currentIkealityItem.trailActivator.ActivateTrailAction();
-        currentIkealityItem.ikealityItemComponentParent.SetActive(true);
+        currentIkealityItem.SetAllArtifacts(currentIkealityItem.ikealityItemComponentParent.transform, true);
         activationTimer = activationTimeTarget;
 
     }
