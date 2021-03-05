@@ -9,11 +9,13 @@ public class IkealityItem : MonoBehaviour
     public GameObject lineObject;
     public ActivateTrail trailActivator;
     public bool lineActivated;
+    public GameObject ikealityItemComponentParent;
 
     public void Start()
     {
         lineActivated = false;
         particles.enableEmission = false;
         lineObject.SetActive(false);
+        ikealityItemComponentParent.SetActive(false);
     }
 }

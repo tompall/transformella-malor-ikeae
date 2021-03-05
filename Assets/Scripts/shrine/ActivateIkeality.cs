@@ -129,6 +129,7 @@ public class ActivateIkeality : MonoBehaviour
         currentIkealityItem.lineObject.SetActive(true);
         currentIkealityItem.lineObject.GetComponent<Animator>().SetBool("start", true);
         currentIkealityItem.trailActivator.ActivateTrailAction();
+        currentIkealityItem.ikealityItemComponentParent.SetActive(true);
         activationTimer = activationTimeTarget;
 
     }
