@@ -13,6 +13,8 @@ public class IkealityItemComponent : MonoBehaviour
 
     public bool circleActivated;
 
+    public Transform sphereParent;
+
 
     // Start is called before the first frame update
     private void Awake()

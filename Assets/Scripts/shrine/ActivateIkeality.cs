@@ -120,6 +120,11 @@ public class ActivateIkeality : MonoBehaviour
         IkealityItemComponent currentIkealityItemComponent = currentGazeTargetObject.GetComponent<IkealityItemComponent>();
         currentIkealityItemComponent.circleActivated = true;
         currentIkealityItemComponent.ActivateAllCircles();
+        currentIkealityItemComponent.circleToActivate.transform.parent = currentIkealityItemComponent.sphereParent;
+        currentIkealityItemComponent.circleToActivate.transform.position = 
+            new Vector3(currentIkealityItemComponent.circleToActivate.transform.position.x,
+            currentIkealityItemComponent.transform.position.y, 
+            currentIkealityItemComponent.circleToActivate.transform.position.z);
         currentIkealityItemComponent.circleToActivate.SetActive(true);
         activationTimer = activationTimeTarget;
     }
