@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class IkealityItem : MonoBehaviour
 {
-    public ParticleSystem particles;
+ //   public ParticleSystem particles;
     public GameObject lineObject;
     public ActivateTrail trailActivator;
     public bool lineActivated;
@@ -14,10 +14,11 @@ public class IkealityItem : MonoBehaviour
     public void Start()
     {
         lineActivated = false;
-        particles.enableEmission = false;
-        lineObject.SetActive(false);
+        //   particles.enableEmission = false;
+        //lineObject.SetActive(false);
+        trailActivator.ActivateTrailAction();
         ikealityItemComponentParent.SetActive(true);
-        SetAllArtifacts(ikealityItemComponentParent.transform, false);
+       // SetAllArtifacts(ikealityItemComponentParent.transform, false);
     }
 
     public void SetAllArtifacts(Transform transform, bool value)

@@ -10,51 +10,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f18fec9b55c4f818e284af454161962, type: 3}
-  m_Name: Speech.MixedRealitySpeechCommandsProfile
+  m_Name: TMI MixedRealitySpeechCommandsProfile
   m_EditorClassIdentifier: 
   isCustomProfile: 1
   startBehavior: 0
   recognitionConfidenceLevel: 1
   speechCommands:
   - localizationKey: 
-    keyword: Open
-    keyCode: 111
+    keyword: Menu
+    keyCode: 51
     action:
-      id: 0
-      description: None
-      axisConstraint: 0
+      id: 2
+      description: Menu
+      axisConstraint: 2
   - localizationKey: 
     keyword: Select
-    keyCode: 115
+    keyCode: 49
     action:
       id: 1
       description: Select
       axisConstraint: 2
   - localizationKey: 
-    keyword: Close
-    keyCode: 99
+    keyword: Toggle Diagnostics
+    keyCode: 48
     action:
-      id: 0
+      id: 14
       description: Toggle Diagnostics
       axisConstraint: 0
   - localizationKey: 
-    keyword: Change Color
-    keyCode: 114
+    keyword: Toggle Profiler
+    keyCode: 57
     action:
-      id: 0
-      description: Toggle Diagnostics
+      id: 15
+      description: Toggle Profiler
       axisConstraint: 0
   - localizationKey: 
     keyword: Enter Calibration Mode
     keyCode: 114
     action:
       id: 0
-      description: Toggle Diagnostics
+      description: Toggle Profiler
       axisConstraint: 0
   - localizationKey: 
     keyword: Exit Calibration Mode
-    keyCode: 119
+    keyCode: 116
     action:
       id: 0
-      description: Toggle Diagnostics
+      description: Toggle Profiler
       axisConstraint: 0
