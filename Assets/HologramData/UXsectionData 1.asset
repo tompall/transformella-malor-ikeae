@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: UXsectionData 1
   m_EditorClassIdentifier: 
-  localPosX: 1
+  localPosX: 2
   localPosY: 0
   localPosZ: 2
   localRotx: 0
