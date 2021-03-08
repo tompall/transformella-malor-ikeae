@@ -12,11 +12,17 @@ public class HologramItem : MonoBehaviour
 
     public HologramItemData ItemData;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(ItemData.localPosX, ItemData.localPosY, ItemData.localPosZ);
-     //   mesh.transform.localScale = new Vector3(pinchSlider.SliderValue, pinchSlider.SliderValue, pinchSlider.SliderValue);
+        transform.localPosition = new Vector3(ItemData.localPosX, ItemData.localPosY, ItemData.localPosZ);
+
+
+       // Quaternion m_HologramTargetRot *= Quaternion.Euler(ItemData.localRotx, ItemData.localRoty, ItemData.localRotz);
+        transform.localRotation = Quaternion.Euler(ItemData.localRotx, ItemData.localRoty, ItemData.localRotz);
+        //   mesh.transform.localScale = new Vector3(pinchSlider.SliderValue, pinchSlider.SliderValue, pinchSlider.SliderValue);
     }
 
     // Update is called once per frame
@@ -35,6 +41,13 @@ public class HologramItem : MonoBehaviour
         ItemData.localPosX = transform.position.x;
         ItemData.localPosY = transform.position.y;
         ItemData.localPosZ = transform.position.z;
+    }
+
+    public void SaveLocalRot()
+    {
+        ItemData.localRotx = transform.eulerAngles.x;
+        ItemData.localRoty = transform.eulerAngles.y;
+        ItemData.localRotz = transform.eulerAngles.z;
     }
 
     public void SliderValueChange()

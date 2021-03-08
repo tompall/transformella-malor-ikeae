@@ -6,7 +6,8 @@ using UnityEngine;
 public class ActivateCalibrationControls : MonoBehaviour
 {
     public GameObject[] controlHandleObjects;
-    public ObjectManipulator manipulatorComponent;
+    public ObjectManipulator[] manipulatorComponents;
+    public MeshRenderer[] rendererComponents;
     public void ActivateControls(bool state)
     {
         if (controlHandleObjects != null)
@@ -16,9 +17,19 @@ public class ActivateCalibrationControls : MonoBehaviour
                 go.SetActive(state);
             }
         }
-        if (manipulatorComponent != null)
+        if (manipulatorComponents != null)
         {
-            manipulatorComponent.enabled = state;
+            foreach (ObjectManipulator om in manipulatorComponents)
+            {
+                om.enabled = state;
+            }
+        }
+        if (rendererComponents != null)
+        {
+            foreach (MeshRenderer mr in rendererComponents)
+            {
+                mr.enabled = state;
+            }
         }
     }
 }
