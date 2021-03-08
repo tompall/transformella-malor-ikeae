@@ -3,7 +3,342 @@ guid: 63385bf2caa6b8647923bd2959c7329f
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AdrenalGland_LMat
+    second: {fileID: 2100000, guid: 5f002076686f32c42af9f38de785c6a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AdrenalGland_RMat
+    second: {fileID: 2100000, guid: b49947a5fa461764b8247519b556bb84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Atlas_C1_FMat
+    second: {fileID: 2100000, guid: d8d9dd3e61bf5ee4b878560078328747, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Axis_C2_FMat
+    second: {fileID: 2100000, guid: cf18404a552521e4ba7bb44fed5b9712, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BladderMat
+    second: {fileID: 2100000, guid: 9e2b59e2caab07c4c84dbc2db173bb4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C3Vertebra_FMat
+    second: {fileID: 2100000, guid: d31d31bab16438748925a9ed2279cbf8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C4Vertebra_FMat
+    second: {fileID: 2100000, guid: 6d7de9c678a52264f939bd2858067455, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C5Vertebra_FMat
+    second: {fileID: 2100000, guid: bf7771cb9e3d062459537be55f547d34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C6Vertebra_FMat
+    second: {fileID: 2100000, guid: b53de5df87fcfcd4aaa86327516f28a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C7Vertebra_FMat
+    second: {fileID: 2100000, guid: c0196c45d2c398a48a3d1fab059ced81, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coccyx_FMat
+    second: {fileID: 2100000, guid: 3e15f1258c3d14a43b3e395b33e4a938, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk001_FMat
+    second: {fileID: 2100000, guid: c62fd613d62a95f429f48266fb817d67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk002_FMat
+    second: {fileID: 2100000, guid: 233e9be423cdff340b981daa9f884172, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk003_FMat
+    second: {fileID: 2100000, guid: 272c35373096bad448ecb10a5e56bb5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk004_FMat
+    second: {fileID: 2100000, guid: 4ef168b40ce2a4048afd76c602fe4193, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk005_FMat
+    second: {fileID: 2100000, guid: 02c7c5d722280264481dd91e1b94ac7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk006_FMat
+    second: {fileID: 2100000, guid: 5c240afa6700ffd478bb5aade5de967f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk007_FMat
+    second: {fileID: 2100000, guid: aada4e612168a6540b8ee15fcf0ac6de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk008_FMat
+    second: {fileID: 2100000, guid: aa2ae22726e8e304c84cf9d1bc31268a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk009_FMat
+    second: {fileID: 2100000, guid: 39e880ddf68a63f40b885be7836bcf60, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk010_FMat
+    second: {fileID: 2100000, guid: c00b5e6e862acea41ae6398c411516ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk011_FMat
+    second: {fileID: 2100000, guid: fd33693ae91f7c440b5954a7539f8fd7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk012_FMat
+    second: {fileID: 2100000, guid: d67e643ac08ba454685239447441c145, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk013_FMat
+    second: {fileID: 2100000, guid: 5b837925439dae54ba2c699767fe9e2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk014_FMat
+    second: {fileID: 2100000, guid: 67e90bea493c9094c90e2b5d96ebf365, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk015_FMat
+    second: {fileID: 2100000, guid: 9a03213b7fd7fb742a7360d658ed990d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk016_FMat
+    second: {fileID: 2100000, guid: 489d972ea2de3024b8d8f8afe936854f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk017_FMat
+    second: {fileID: 2100000, guid: ed0a249c06cc1954590dd2929f45e297, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk018_FMat
+    second: {fileID: 2100000, guid: f27dcc3b8266f6f4995042acf9992c68, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk019_FMat
+    second: {fileID: 2100000, guid: 9d65cfdbfb578644984f8181799aa8bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk020_FMat
+    second: {fileID: 2100000, guid: a856a7448d0f13a43ade353629c545a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk021_FMat
+    second: {fileID: 2100000, guid: d0231e18b1a1fef45b50724b80b18043, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk022_FMat
+    second: {fileID: 2100000, guid: 2afcec196e436cb40a991aab4b6a45f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk023_FMat
+    second: {fileID: 2100000, guid: 307a8aba25621b844a010d6539c0bc7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FallopianTube_LtMat
+    second: {fileID: 2100000, guid: 4becfeb416ba54c44924377cf01be433, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FallopianTube_RtMat
+    second: {fileID: 2100000, guid: abf1cf9edf265e64884827e8f63f8652, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hip_F_LtMat
+    second: {fileID: 2100000, guid: 2f6b8502798bac5489bb64ee030296a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hip_F_RtMat
+    second: {fileID: 2100000, guid: a224ea8bc6e461849bb4971f18347dc7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kidney_LMat
+    second: {fileID: 2100000, guid: ef3c7e0a4607f4c428d47d73c7411b00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kidney_RMat
+    second: {fileID: 2100000, guid: 49b48850ee8b2654baef067be5386ade, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LumbarVer1_FMat
+    second: {fileID: 2100000, guid: 383605218f776994db5e34d3103351f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LumbarVer2_FMat
+    second: {fileID: 2100000, guid: de68a3ab3c5937e4cab14d081aa5a1fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LumbarVer3_FMat
+    second: {fileID: 2100000, guid: 446cde05cee5c464a90a3b8ef842870f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LumbarVer4_FMat
+    second: {fileID: 2100000, guid: b773539b00920b041b9fa56f4e0141a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LumbarVert5_FMat
+    second: {fileID: 2100000, guid: c7aea0451f3412c48ab0f7eda950e691, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ovarian_Ligament_LtMat
+    second: {fileID: 2100000, guid: b2bd3f74a82e48f46ae481b1ed041d8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ovarian_Ligament_RtMat
+    second: {fileID: 2100000, guid: 34ce819adced3dd4ea0c50174c1d17b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ovary_LtMat
+    second: {fileID: 2100000, guid: 5f40778ef2ee15a46be8d60d37d5e227, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ovary_RtMat
+    second: {fileID: 2100000, guid: a195bc42960721942ab3d8e5483b9d51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PubicSymphysis_FMat
+    second: {fileID: 2100000, guid: 2f0cf4848c738f847a7e89f833bf515e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sacrum_FMat
+    second: {fileID: 2100000, guid: 56ff32814f9741544ad5f4dce622d2fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thoracic10_FMat
+    second: {fileID: 2100000, guid: 75eafc6378a1ce243b309be602fd4778, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thoracic11_FMat
+    second: {fileID: 2100000, guid: 3df39e154cddeaf49905c8e2e930f4a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thoracic12_FMat
+    second: {fileID: 2100000, guid: e4785b795a883e4429fdf439b5a68688, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thoracic1_FMat
+    second: {fileID: 2100000, guid: 49d301329025212469f8d86ecd82c8b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thoracic2_FMat
+    second: {fileID: 2100000, guid: 7392b0e8bfe662f4987118a8ce0517a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thoracic3_FMat
+    second: {fileID: 2100000, guid: 9cada3c00efe72d4bad44d0b29280808, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thoracic4__FMat
+    second: {fileID: 2100000, guid: a2260ee21cead2143bfd45759b754a77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thoracic5_FMat
+    second: {fileID: 2100000, guid: f785ee62eb49fc54495edb1babe7f0de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thoracic6_FMat
+    second: {fileID: 2100000, guid: 12498a1c5b1999845861d73f8cbb5586, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thoracic7_FMat
+    second: {fileID: 2100000, guid: f98df8fd6427f104a9e33448c52e84d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thoracic8_FMat
+    second: {fileID: 2100000, guid: c869afbe7f672a842af7f1c9624d8a83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thoracic9_FMat
+    second: {fileID: 2100000, guid: 164534709003e67439fc6f45e838c89f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ureter_LtMat
+    second: {fileID: 2100000, guid: f52f99c1d56511e48982a6f812082414, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ureter_RtMat
+    second: {fileID: 2100000, guid: f8c125d41c4e3a641b665e4a5c9b6d25, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uterus_WHOLEMat
+    second: {fileID: 2100000, guid: 8e35a17579265324e9e262e536162026, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WomanMat
+    second: {fileID: 2100000, guid: 2be53eef799f5d74989e22841f3b4fe6, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
