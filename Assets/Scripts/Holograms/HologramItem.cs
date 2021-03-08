@@ -12,7 +12,9 @@ public class HologramItem : MonoBehaviour
 
     public HologramItemData ItemData;
 
-    
+  //  public Transform rotationControls;
+   // public Transform controlParent;
+
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +51,16 @@ public class HologramItem : MonoBehaviour
         ItemData.localRoty = transform.eulerAngles.y;
         ItemData.localRotz = transform.eulerAngles.z;
     }
+
+   /* public void ParentRotationControls()
+    {
+        rotationControls.parent = this.transform;
+    }
+
+    public void UnparentRotationControls()
+    {
+        rotationControls.parent = controlParent;
+    }*/
 
     public void SliderValueChange()
     {

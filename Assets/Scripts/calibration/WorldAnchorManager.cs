@@ -9,11 +9,17 @@ public class WorldAnchorManager : MonoBehaviour
 {
     public WorldAnchorStore store;
 
-    public WorldAnchor anchor;
+    public WorldAnchor anchorShrine; 
+    
+    public WorldAnchor anchorCeramics;
 
-    public bool savedRoot;
+    public bool savedRootShrine;
 
-    public GameObject rootGameObject;
+    public bool savedRootCeramics;
+
+    public GameObject rootGameObjectShrine;
+
+    public GameObject rootGameObjectCeramics;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +30,7 @@ public class WorldAnchorManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     private void StoreLoaded (WorldAnchorStore store)
@@ -32,7 +38,8 @@ public class WorldAnchorManager : MonoBehaviour
         this.store = store;
 
         ListAnchors();
-        LoadGame();
+        LoadGameShrine();
+        LoadGameCeramics();
        
     }
 
@@ -46,30 +53,53 @@ public class WorldAnchorManager : MonoBehaviour
         
     }
 
-    public void SaveGame()
+    public void SaveGameShrine()
     {
-        if (!savedRoot)
+        if (!savedRootShrine)
         {
-            savedRoot = store.Save("rootGameObject", anchor);
-            Debug.Log(anchor.transform.position);
+            savedRootShrine = this.store.Save("rootGameObjectShrine", anchorShrine);
+          
+            Debug.Log(anchorShrine.transform.position);
         }
     }
 
-    private void LoadGame()
+    public void SaveGameCeramics()
     {
-        savedRoot = store.Load("rootGameObject", rootGameObject);
-
-        if (!this.savedRoot)
+        if (!savedRootCeramics)
         {
-            Debug.Log("no anchor was saved");
+            savedRootCeramics = this.store.Save("rootGameObjectCeramics", anchorCeramics);
+
+            Debug.Log(anchorCeramics.transform.position);
+        }
+    }
+
+    private void LoadGameShrine()
+    {
+        savedRootShrine = store.Load("rootGameObjectShrine", rootGameObjectShrine);
+
+        if (!this.savedRootShrine)
+        {
+            Debug.Log("no shrine anchor was saved");
+        }
+    }
+
+    private void LoadGameCeramics()
+    {
+        savedRootShrine = store.Load("rootGameObjectCeramics", rootGameObjectCeramics);
+
+        if (!this.savedRootCeramics)
+        {
+            Debug.Log("no ceramics anchor was saved");
         }
     }
 
 
 
-    private void ResetPositioning()
+
+    private void ResetPositioningShrine()
     {
-        store.Delete("rootGameObject");
+        store.Delete("rootGameObjectShrine");
+        savedRootShrine = false;
 
         // or 
        // store.Clear();
@@ -77,18 +107,41 @@ public class WorldAnchorManager : MonoBehaviour
 
     }
 
-    public void RemoveAnchor()
+    private void ResetPositioningCeramics()
     {
-        ResetPositioning();
-        var sphereAnchor = rootGameObject.GetComponent<WorldAnchor>();
+        store.Delete("rootGameObjectCeramics");
+        savedRootCeramics = false;
+
+        // or 
+        // store.Clear();
+        // for all data delete
+
+    }
+    public void RemoveAnchorSrhine()
+    {
+        ResetPositioningShrine();
+        var sphereAnchor = rootGameObjectShrine.GetComponent<WorldAnchor>();
         Destroy(sphereAnchor);
         
     }
 
-    public void AddAnchor()
+    public void RemoveAnchorCermics()
     {
-        anchor = rootGameObject.AddComponent<WorldAnchor>();
+        ResetPositioningShrine();
+        var sphereAnchor = rootGameObjectCeramics.GetComponent<WorldAnchor>();
+        Destroy(sphereAnchor);
+
     }
-   
+
+    public void AddAnchorShrine()
+    {
+        anchorShrine = rootGameObjectShrine.AddComponent<WorldAnchor>();
+    }
+
+    public void AddAnchorCeramics()
+    {
+        anchorCeramics = rootGameObjectCeramics.AddComponent<WorldAnchor>();
+    }
+
 }
 

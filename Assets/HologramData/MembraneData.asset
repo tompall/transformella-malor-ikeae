@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: MembraneData
   m_EditorClassIdentifier: 
   localPosX: 3
-  localPosY: 0.5
+  localPosY: 0
   localPosZ: 1
+  localRotx: 0
+  localRoty: 0
+  localRotz: 0

@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 183148197}
   - component: {fileID: 183148196}
   m_Layer: 0
-  m_Name: WorldAnchorManager (1)
+  m_Name: WorldAnchorManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,9 +241,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27a23f81bf194cd4fab3bf8f8dfeffbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anchor: {fileID: 0}
-  savedRoot: 0
-  rootGameObject: {fileID: 1952221165}
+  anchorShrine: {fileID: 1952221171}
+  anchorCeramics: {fileID: 0}
+  savedRootShrine: 0
+  savedRootCeramics: 0
+  rootGameObjectShrine: {fileID: 1952221165}
+  rootGameObjectCeramics: {fileID: 0}
 --- !u!4 &183148197
 Transform:
   m_ObjectHideFlags: 0
@@ -2017,7 +2020,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 183148196}
-        m_MethodName: RemoveAnchor
+        m_MethodName: RemoveAnchorSrhine
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2031,7 +2034,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 183148196}
-        m_MethodName: AddAnchor
+        m_MethodName: AddAnchorShrine
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2042,7 +2045,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 183148196}
-        m_MethodName: SaveGame
+        m_MethodName: SaveGameShrine
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
