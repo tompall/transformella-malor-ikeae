@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: ShrineData
   m_EditorClassIdentifier: 
-  localPosX: 0.000649748
+  localPosX: 0
   localPosY: -2.92811
-  localPosZ: -0.4464803
+  localPosZ: 0
   localRotx: 0
   localRoty: 174
   localRotz: 0
