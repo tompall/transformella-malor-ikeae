@@ -6,21 +6,33 @@ public class GameObjectTriggerEntrance : MonoBehaviour
 {
 
     public GameObject[] objectsToActivate;
+    public GameObject[] objectsToDeactivate;
 
     // Start is called before the first frame update
     void Start()
     {
-        foreach (GameObject vid in objectsToActivate)
-        {
-            vid.SetActive(false);
-        }
+
     }
 
     void OnTriggerEnter(Collider other)
     {
-        foreach (GameObject vid in objectsToActivate)
+
+        if (objectsToActivate != null)
         {
-            vid.SetActive(true);
+
+            foreach (GameObject obj in objectsToActivate)
+            {
+                obj.SetActive(true);
+            }
+        }
+
+        if (objectsToDeactivate != null)
+        {
+
+            foreach (GameObject ob in objectsToDeactivate)
+            {
+                ob.SetActive(false);
+            }
         }
     }
 }
