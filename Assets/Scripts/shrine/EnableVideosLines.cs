@@ -10,16 +10,17 @@ public class EnableVideosLines : MonoBehaviour
     public GameObject horizontalLines;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        int count = transform.childCount;
-        for (int i = 0; i < count; i++)
-        {
-            Transform child = transform.GetChild(i);
-            videosToEnable.Add(child.gameObject);
-        }
 
-        StartCoroutine(TurnVideosOn());
+         StartCoroutine(TurnVideosOn());
+
+       /* foreach (GameObject go in videosToEnable)
+        {
+            go.SetActive(true);
+           
+        }
+        horizontalLines.SetActive(true);*/
     }
 
     // Update is called once per frame
@@ -37,14 +38,14 @@ public class EnableVideosLines : MonoBehaviour
         }
         horizontalLines.SetActive(true);
 
-        StartCoroutine(TurnVideosOff());
-        yield return null;
+       // StartCoroutine(TurnVideosOff());
+      //  yield return null;
     }
 
     public IEnumerator TurnVideosOff()
     {
 
-        yield return new WaitForSeconds(220f);
+       // yield return new WaitForSeconds(220f);
         foreach (GameObject go in videosToEnable)
         {
             go.SetActive(false);
