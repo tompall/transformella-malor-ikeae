@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: Repro-02
   m_EditorClassIdentifier: 
-  localPosX: 5.9604
-  localPosY: 3.6954
-  localPosZ: 2.1457
+  localPosX: 0.00000005960464
+  localPosY: 0.000003695488
+  localPosZ: 0.000002145767
   localRotx: 90
   localRoty: 0
   localRotz: 90
