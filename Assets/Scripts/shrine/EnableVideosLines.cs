@@ -13,7 +13,7 @@ public class EnableVideosLines : MonoBehaviour
     public void Start()
     {
 
-         StartCoroutine(TurnVideosOn());
+         
 
        /* foreach (GameObject go in videosToEnable)
         {
@@ -28,6 +28,12 @@ public class EnableVideosLines : MonoBehaviour
     {
         
     }
+
+    public void StartVideos()
+    {
+        StartCoroutine(TurnVideosOn());
+    }
+
 
     public IEnumerator TurnVideosOn()
     {
