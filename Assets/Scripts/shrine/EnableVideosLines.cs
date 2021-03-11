@@ -9,10 +9,11 @@ public class EnableVideosLines : MonoBehaviour
 
     public GameObject horizontalLines;
 
+    public bool videnabled;
     // Start is called before the first frame update
     public void Start()
     {
-
+        videnabled = false;
          
 
        /* foreach (GameObject go in videosToEnable)
@@ -31,7 +32,10 @@ public class EnableVideosLines : MonoBehaviour
 
     public void StartVideos()
     {
+        if (!videnabled) {
+            videnabled = true;
         StartCoroutine(TurnVideosOn());
+        }
     }
 
 
