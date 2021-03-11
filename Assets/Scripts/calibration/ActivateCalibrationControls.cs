@@ -8,6 +8,12 @@ public class ActivateCalibrationControls : MonoBehaviour
     public GameObject[] controlHandleObjects;
     public ObjectManipulator[] manipulatorComponents;
     public MeshRenderer[] rendererComponents;
+
+
+    public void Start()
+    {
+        ActivateControls(false);
+    }
     public void ActivateControls(bool state)
     {
         if (controlHandleObjects != null)

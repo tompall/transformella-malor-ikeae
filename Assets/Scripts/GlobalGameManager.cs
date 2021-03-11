@@ -7,7 +7,10 @@ using UnityEngine.SceneManagement;
 public class GlobalGameManager : MonoBehaviour
 {
 
-    
+
+    public GameObject[] objectsToReactivateOnRestart;
+    public GameObject[] objectsToDeActivateOnRestart;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +21,19 @@ public class GlobalGameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void RestartNarrativeAnywhere()
+    {
+        foreach (GameObject gob in objectsToReactivateOnRestart)
+        {
+            gob.SetActive(true);
+        }
+
+        foreach (GameObject gob in objectsToDeActivateOnRestart)
+        {
+            gob.SetActive(false);
+        }
     }
 
     public void LoadCalibrationScene()
