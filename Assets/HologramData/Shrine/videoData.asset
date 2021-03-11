@@ -16,7 +16,7 @@ MonoBehaviour:
   localPosY: 0
   localPosZ: 0
   localRotx: -180
-  localRoty: -180
+  localRoty: 0
   localRotz: -180
   localSx: 1
   localSy: 1
