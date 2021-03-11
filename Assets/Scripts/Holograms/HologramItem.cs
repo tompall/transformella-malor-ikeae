@@ -11,7 +11,7 @@ public class HologramItem : MonoBehaviour
   //  public GameObject mesh;
 
     public HologramItemData ItemData;
-
+    public Transform hologramToSave;
   //  public Transform rotationControls;
    // public Transform controlParent;
 
@@ -19,11 +19,11 @@ public class HologramItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.localPosition = new Vector3(ItemData.localPosX, ItemData.localPosY, ItemData.localPosZ);
+        hologramToSave.transform.localPosition = new Vector3(ItemData.localPosX, ItemData.localPosY, ItemData.localPosZ);
 
 
-       // Quaternion m_HologramTargetRot *= Quaternion.Euler(ItemData.localRotx, ItemData.localRoty, ItemData.localRotz);
-        transform.localRotation = Quaternion.Euler(ItemData.localRotx, ItemData.localRoty, ItemData.localRotz);
+        // Quaternion m_HologramTargetRot *= Quaternion.Euler(ItemData.localRotx, ItemData.localRoty, ItemData.localRotz);
+        hologramToSave.transform.localRotation = Quaternion.Euler(ItemData.localRotx, ItemData.localRoty, ItemData.localRotz);
         //   mesh.transform.localScale = new Vector3(pinchSlider.SliderValue, pinchSlider.SliderValue, pinchSlider.SliderValue);
     }
 
@@ -40,16 +40,16 @@ public class HologramItem : MonoBehaviour
 
     public void SaveLocalPos()
     {
-        ItemData.localPosX = transform.position.x;
-        ItemData.localPosY = transform.position.y;
-        ItemData.localPosZ = transform.position.z;
+        ItemData.localPosX = hologramToSave.transform.position.x;
+        ItemData.localPosY = hologramToSave.transform.position.y;
+        ItemData.localPosZ = hologramToSave.transform.position.z;
     }
 
     public void SaveLocalRot()
     {
-        ItemData.localRotx = transform.eulerAngles.x;
-        ItemData.localRoty = transform.eulerAngles.y;
-        ItemData.localRotz = transform.eulerAngles.z;
+        ItemData.localRotx = hologramToSave.transform.eulerAngles.x;
+        ItemData.localRoty = hologramToSave.transform.eulerAngles.y;
+        ItemData.localRotz = hologramToSave.transform.eulerAngles.z;
     }
 
    /* public void ParentRotationControls()

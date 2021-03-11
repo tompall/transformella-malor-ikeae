@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/calibration-scene.unity
-    guid: af4b8f6fd3c74204099065603bd392f2
-  - enabled: 1
-    path: Assets/Scenes/button-test.unity
-    guid: 8445e75a59efbfd439343aae9cdf3c67
+    path: Assets/Scenes/tmi-ktz.unity
+    guid: fa1839a3a46ddd24eaca68442177ab8e
   m_configObjects: {}
