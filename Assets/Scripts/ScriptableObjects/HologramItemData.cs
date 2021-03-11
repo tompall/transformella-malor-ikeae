@@ -13,4 +13,8 @@ public class HologramItemData : ScriptableObject
     public float localRoty;
     public float localRotz;
 
+    public float localSx;
+    public float localSy;
+    public float localSz;
+
 }

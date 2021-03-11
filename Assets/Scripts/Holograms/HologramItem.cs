@@ -12,6 +12,8 @@ public class HologramItem : MonoBehaviour
 
     public HologramItemData ItemData;
     public Transform hologramToSave;
+
+    public bool saveScale;
   //  public Transform rotationControls;
    // public Transform controlParent;
 
@@ -25,6 +27,10 @@ public class HologramItem : MonoBehaviour
         // Quaternion m_HologramTargetRot *= Quaternion.Euler(ItemData.localRotx, ItemData.localRoty, ItemData.localRotz);
         hologramToSave.transform.localRotation = Quaternion.Euler(ItemData.localRotx, ItemData.localRoty, ItemData.localRotz);
         //   mesh.transform.localScale = new Vector3(pinchSlider.SliderValue, pinchSlider.SliderValue, pinchSlider.SliderValue);
+        if (saveScale)
+        {
+            hologramToSave.transform.localScale = new Vector3(ItemData.localSx, ItemData.localSy, ItemData.localSz);
+        }
     }
 
     // Update is called once per frame
@@ -40,9 +46,16 @@ public class HologramItem : MonoBehaviour
 
     public void SaveLocalPos()
     {
-        ItemData.localPosX = hologramToSave.transform.position.x;
-        ItemData.localPosY = hologramToSave.transform.position.y;
-        ItemData.localPosZ = hologramToSave.transform.position.z;
+        ItemData.localPosX = hologramToSave.transform.localPosition.x;
+        ItemData.localPosY = hologramToSave.transform.localPosition.y;
+        ItemData.localPosZ = hologramToSave.transform.localPosition.z;
+
+        if (saveScale)
+        {
+            ItemData.localSx = hologramToSave.transform.localScale.x;
+            ItemData.localSy = hologramToSave.transform.localScale.y;
+            ItemData.localSz = hologramToSave.transform.localScale.z;
+        }
     }
 
     public void SaveLocalRot()

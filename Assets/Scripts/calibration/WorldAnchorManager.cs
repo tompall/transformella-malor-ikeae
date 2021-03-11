@@ -80,6 +80,8 @@ public class WorldAnchorManager : MonoBehaviour
         if (!this.savedRootShrine)
         {
             Debug.Log("no shrine anchor was saved");
+            SaveGameShrine();
+            Debug.Log("Saving.." + anchorShrine.transform.position);
         }
     }
 
@@ -90,6 +92,8 @@ public class WorldAnchorManager : MonoBehaviour
         if (!this.savedRootCeramics)
         {
             Debug.Log("no ceramics anchor was saved");
+            SaveGameCeramics();
+            Debug.Log("Saving.." + anchorCeramics.transform.position);
         }
     }
 
