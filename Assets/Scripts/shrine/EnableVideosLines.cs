@@ -77,7 +77,7 @@ public class EnableVideosLines : MonoBehaviour
             }
 
            
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
         }
 
         if (horizontalLines != null)
