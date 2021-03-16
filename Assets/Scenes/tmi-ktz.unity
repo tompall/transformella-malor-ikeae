@@ -1280,12 +1280,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4da678bc5ca09524d92c32332e99d02c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.052
+      value: -2.142
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4da678bc5ca09524d92c32332e99d02c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.024582267
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4da678bc5ca09524d92c32332e99d02c,
         type: 3}
@@ -2226,7 +2226,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 69145067}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03f8d663a5d516345b1cd1f5fbf72763, type: 3}
+  m_Script: {fileID: 11500000, guid: 1407ff3d79bfd6c4ead7cc047bed4f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &70463104
@@ -51093,7 +51093,7 @@ PrefabInstance:
     - target: {fileID: -9152320357749277813, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
@@ -51163,12 +51163,12 @@ PrefabInstance:
     - target: {fileID: -5569030421264209981, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5089008205019660131, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3778511376575077905, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
@@ -51188,7 +51188,7 @@ PrefabInstance:
     - target: {fileID: -217675416274624244, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19257136377953304, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
@@ -51213,7 +51213,7 @@ PrefabInstance:
     - target: {fileID: 1760400028381224541, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3592201861037139039, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
@@ -51228,12 +51228,12 @@ PrefabInstance:
     - target: {fileID: 4163029579492953229, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4333600548072594810, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6270771926034199632, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
@@ -51253,27 +51253,27 @@ PrefabInstance:
     - target: {fileID: 6769182696258372668, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6920689582098594922, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7314265459217926070, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7410441263046077744, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7456371365786201959, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9067279263356131923, guid: 9b687eca8947eb047bf2d38b3dd49cb1,
         type: 3}
@@ -83874,7 +83874,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!328 &9192041141962383280
 VideoPlayer:
   m_ObjectHideFlags: 0
