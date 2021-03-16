@@ -21840,7 +21840,7 @@ TrailRenderer:
   m_Time: 2000
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.01
+    widthMultiplier: 0.003
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -29350,7 +29350,7 @@ TrailRenderer:
   m_Time: 2000
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.01
+    widthMultiplier: 0.003
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -39467,7 +39467,7 @@ TrailRenderer:
   m_Time: 2000
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.01
+    widthMultiplier: 0.003
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -47378,7 +47378,7 @@ TrailRenderer:
   m_Time: 2000
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.01
+    widthMultiplier: 0.003
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -47985,7 +47985,7 @@ TrailRenderer:
   m_Time: 2000
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.01
+    widthMultiplier: 0.003
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -48781,7 +48781,7 @@ TrailRenderer:
   m_Time: 2000
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.01
+    widthMultiplier: 0.003
     widthCurve:
       serializedVersion: 2
       m_Curve:
