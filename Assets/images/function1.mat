@@ -8,14 +8,15 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: function1
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _ALPHATEST_ON _DIRECTIONAL_LIGHT _HOVER_LIGHT _REFLECTIONS _SPECULAR_HIGHLIGHTS
+  m_Shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
+  m_ShaderKeywords: _ALPHATEST_ON _DIRECTIONAL_LIGHT _EMISSION _HOVER_LIGHT _REFLECTIONS
+    _SPECULAR_HIGHLIGHTS
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
   stringTagMap:
-    RenderType: TransparentCutout
+    RenderType: Cutout
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -49,7 +50,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: f2cb59b36c9e43440b7cf0e786f74d98, type: 3}
+        m_Texture: {fileID: 2800000, guid: c644c027667994c459c0cdf88fb66999, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -86,13 +87,13 @@ Material:
     - _ColorWriteMask: 15
     - _CullMode: 2
     - _CustomMode: 1
-    - _Cutoff: 0.5
+    - _Cutoff: 0.55
     - _DetailNormalMapScale: 1
     - _DirectionalLight: 1
     - _DstBlend: 0
     - _EdgeSmoothingValue: 0.002
     - _EnableChannelMap: 0
-    - _EnableEmission: 0
+    - _EnableEmission: 1
     - _EnableHoverColorOverride: 0
     - _EnableLocalSpaceTriplanarMapping: 0
     - _EnableNormalMap: 0
@@ -106,7 +107,7 @@ Material:
     - _FadeMinValue: 0
     - _FluentLightIntensity: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.18
     - _GlossyReflections: 1
     - _HoverLight: 1
     - _IgnoreZScale: 0
@@ -137,7 +138,7 @@ Material:
     - _RoundCornerMargin: 0.01
     - _RoundCornerRadius: 0.25
     - _RoundCorners: 0
-    - _Smoothness: 0.5
+    - _Smoothness: 0.18
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SphericalHarmonics: 0
@@ -160,7 +161,7 @@ Material:
     - _ClippingBorderColor: {r: 1, g: 0.2, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissiveColor: {r: 78.79325, g: 78.79325, b: 78.79325, a: 0.5294118}
     - _EnvironmentColorX: {r: 1, g: 0, b: 0, a: 1}
     - _EnvironmentColorY: {r: 0, g: 1, b: 0, a: 1}
     - _EnvironmentColorZ: {r: 0, g: 0, b: 1, a: 1}

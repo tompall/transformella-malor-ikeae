@@ -1,4 +1,5 @@
 ﻿using Microsoft.MixedReality.Toolkit.UI;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,11 @@ public class EnableVideosLines : MonoBehaviour
 
     public GameObject nextInteractiveIkeality;
 
-  
+
+    public VideoPlayer firstVideo;
+
+    public VideoPlayer secondVideo;
+
 
     public bool videnabled;
     // Start is called before the first frame update
@@ -22,15 +27,24 @@ public class EnableVideosLines : MonoBehaviour
     {
         videnabled = false;
 
-        if (nextInteractiveIkeality != null) { 
-        nextInteractiveIkeality.GetComponent<Interactable>().enabled = false;
+        if (nextInteractiveIkeality != null)
+        {
+            nextInteractiveIkeality.GetComponent<Interactable>().enabled = false;
         }
-        /* foreach (GameObject go in videosToEnable)
-         {
-             go.SetActive(true);
 
-         }
-         horizontalLines.SetActive(true);*/
+        firstVideo.loopPointReached += EndReached;
+
+
+    }
+
+    private void EndReached(VideoPlayer source)
+    {
+        if (firstVideo != null)
+        {
+            secondVideo.Play();
+            secondVideo.SetDirectAudioVolume(0, 1f);
+
+        }
     }
 
     // Update is called once per frame
@@ -39,21 +53,23 @@ public class EnableVideosLines : MonoBehaviour
 
     }
 
+
+
     public void StartVideos()
     {
         if (!videnabled)
         {
             videnabled = true;
             StartCoroutine(TurnVideosOn());
-            Debug.Log("videoson");
+            //  Debug.Log("videoson");
         }
     }
 
     public void StopVideos()
     {
-       
-            StartCoroutine(TurnVideosOff());
-        
+
+        StartCoroutine(TurnVideosOff());
+
     }
 
 
@@ -76,7 +92,7 @@ public class EnableVideosLines : MonoBehaviour
                 }
             }
 
-           
+
             yield return new WaitForSeconds(2f);
         }
 
@@ -86,7 +102,7 @@ public class EnableVideosLines : MonoBehaviour
         }
 
 
-          yield return null;
+        yield return null;
     }
 
     public IEnumerator TurnVideosOff()
@@ -100,8 +116,8 @@ public class EnableVideosLines : MonoBehaviour
                 go.SetActive(false);
                 yield return new WaitForSeconds(0.5f);
             }
-           
+
         }
-          yield return null;
+        yield return null;
     }
 }
