@@ -5,6 +5,11 @@ using UnityEngine;
 public class WombEntrance : MonoBehaviour
 {
 
+
+    public GameObject[] shrineWolrd;
+
+    public GameObject[] wombWorld;
+
     public void Start()
     {
         
@@ -14,11 +19,11 @@ public class WombEntrance : MonoBehaviour
     {
         RoomSwitchTrigger.instance.playerInWombRoom = true;
 
-            foreach (GameObject go in RoomSwitchTrigger.instance.wombWorld)
+            foreach (GameObject go in wombWorld)
             {
                 go.SetActive(true);
             }
-            foreach (GameObject gob in RoomSwitchTrigger.instance.shrineWolrd)
+            foreach (GameObject gob in shrineWolrd)
             {
                 gob.SetActive(false);
             }

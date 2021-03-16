@@ -5,6 +5,11 @@ using UnityEngine;
 public class ShrineEntrance : MonoBehaviour
 {
     // Start is called before the first frame update
+
+
+    public GameObject[] shrineWolrd;
+
+    public GameObject[] wombWorld;
     void Start()
     {
         
@@ -14,11 +19,11 @@ public class ShrineEntrance : MonoBehaviour
     {
         RoomSwitchTrigger.instance.playerInWombRoom = false;
 
-        foreach (GameObject go in RoomSwitchTrigger.instance.wombWorld)
+        foreach (GameObject go in wombWorld)
         {
             go.SetActive(false);
         }
-        foreach (GameObject gob in RoomSwitchTrigger.instance.shrineWolrd)
+        foreach (GameObject gob in shrineWolrd)
         {
             gob.SetActive(true);
         }

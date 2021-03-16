@@ -21,11 +21,11 @@ public class EnableVideosLines : MonoBehaviour
     public VideoPlayer secondVideo;
 
 
-    public bool videnabled;
+    
     // Start is called before the first frame update
     public void Start()
     {
-        videnabled = false;
+        
 
         if (nextInteractiveIkeality != null)
         {
@@ -57,12 +57,10 @@ public class EnableVideosLines : MonoBehaviour
 
     public void StartVideos()
     {
-        if (!videnabled)
-        {
-            videnabled = true;
+        
             StartCoroutine(TurnVideosOn());
             //  Debug.Log("videoson");
-        }
+        
     }
 
     public void StopVideos()
