@@ -8,6 +8,9 @@ TagManager:
   - hologram
   - ikeality
   - ikealitycomponent
+  - solosound
+  - spawnlines
+  - lastvideo
   layers:
   - Default
   - TransparentFX

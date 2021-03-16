@@ -25,7 +25,7 @@ public class HologramItem : MonoBehaviour
 
 
         // Quaternion m_HologramTargetRot *= Quaternion.Euler(ItemData.localRotx, ItemData.localRoty, ItemData.localRotz);
-        hologramToSave.transform.localRotation = Quaternion.Euler(ItemData.localRotx, -ItemData.localRoty, ItemData.localRotz);
+        hologramToSave.transform.localRotation = Quaternion.Euler(ItemData.localRotx, ItemData.localRoty, ItemData.localRotz);
         //   mesh.transform.localScale = new Vector3(pinchSlider.SliderValue, pinchSlider.SliderValue, pinchSlider.SliderValue);
         if (saveScale)
         {

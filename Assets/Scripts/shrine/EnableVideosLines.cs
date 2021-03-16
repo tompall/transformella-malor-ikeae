@@ -1,41 +1,59 @@
-﻿using System.Collections;
+﻿using Microsoft.MixedReality.Toolkit.UI;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class EnableVideosLines : MonoBehaviour
 {
 
-    public List <GameObject> videosToEnable;
+    public List<GameObject> videosToEnable;
+    public List<GameObject> videosToDisable;
 
     public GameObject horizontalLines;
+
+    public GameObject nextInteractiveIkeality;
+
+  
 
     public bool videnabled;
     // Start is called before the first frame update
     public void Start()
     {
         videnabled = false;
-         
 
-       /* foreach (GameObject go in videosToEnable)
-        {
-            go.SetActive(true);
-           
+        if (nextInteractiveIkeality != null) { 
+        nextInteractiveIkeality.GetComponent<Interactable>().enabled = false;
         }
-        horizontalLines.SetActive(true);*/
+        /* foreach (GameObject go in videosToEnable)
+         {
+             go.SetActive(true);
+
+         }
+         horizontalLines.SetActive(true);*/
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void StartVideos()
     {
-        if (!videnabled) {
+        if (!videnabled)
+        {
             videnabled = true;
-        StartCoroutine(TurnVideosOn());
+            StartCoroutine(TurnVideosOn());
+            Debug.Log("videoson");
         }
+    }
+
+    public void StopVideos()
+    {
+       
+            StartCoroutine(TurnVideosOff());
+        
     }
 
 
@@ -44,24 +62,46 @@ public class EnableVideosLines : MonoBehaviour
         foreach (GameObject go in videosToEnable)
         {
             go.SetActive(true);
-            yield return new WaitForSeconds (0.5f);
-        }
-        horizontalLines.SetActive(true);
 
-       // StartCoroutine(TurnVideosOff());
-      //  yield return null;
+            if (go.tag == "spawnlines")
+            {
+                horizontalLines.SetActive(true);
+            }
+
+            if (go.tag == "lastvideo")
+            {
+                if (nextInteractiveIkeality != null)
+                {
+                    nextInteractiveIkeality.GetComponent<Interactable>().enabled = true;
+                }
+            }
+
+           
+            yield return new WaitForSeconds(1f);
+        }
+
+        if (horizontalLines != null)
+        {
+            horizontalLines.SetActive(true);
+        }
+
+
+          yield return null;
     }
 
     public IEnumerator TurnVideosOff()
     {
 
-       // yield return new WaitForSeconds(220f);
-        foreach (GameObject go in videosToEnable)
+        Debug.Log("videosoff");
+        if (videosToDisable != null)
         {
-            go.SetActive(false);
-            yield return new WaitForSeconds(0.5f);
+            foreach (GameObject go in videosToDisable)
+            {
+                go.SetActive(false);
+                yield return new WaitForSeconds(0.5f);
+            }
+           
         }
-        horizontalLines.SetActive(false);
-        yield return null;
+          yield return null;
     }
 }
