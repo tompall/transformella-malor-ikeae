@@ -3646,6 +3646,19 @@ MonoBehaviour:
   objectsToReactivateOnRestart:
   - {fileID: 212867644}
   - {fileID: 1248411286}
+  - {fileID: 113987416}
+  - {fileID: 9192041141962383293}
+  - {fileID: 684332764}
+  - {fileID: 1187701778}
+  - {fileID: 370727897}
+  - {fileID: 1862768915}
+  - {fileID: 613112500}
+  - {fileID: 1999594710}
+  - {fileID: 1803335120}
+  - {fileID: 498083647}
+  - {fileID: 1697454300}
+  - {fileID: 1916413107}
+  - {fileID: 1555439331}
   objectsToDeActivateOnRestart:
   - {fileID: 352084567}
   - {fileID: 335105152}
@@ -3691,6 +3704,18 @@ MonoBehaviour:
   - {fileID: 1386585503}
   - {fileID: 171451040}
   - {fileID: 895589353}
+  - {fileID: 9192041142114768530}
+  - {fileID: 9192041141679153472}
+  - {fileID: 9192041143153558169}
+  - {fileID: 9192041141998460214}
+  - {fileID: 9192041142587662889}
+  - {fileID: 9192041143470302370}
+  - {fileID: 9192041142668312570}
+  - {fileID: 9192041141877968359}
+  - {fileID: 336729163}
+  - {fileID: 1536433993}
+  - {fileID: 1663532209}
+  - {fileID: 640049863}
 --- !u!4 &113987419
 Transform:
   m_ObjectHideFlags: 0
@@ -4125,7 +4150,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.05, z: 0.05}
+  m_Size: {x: 1, y: 0.1, z: 0.1}
   m_Center: {x: -0.38, y: -0.08, z: 3.75}
 --- !u!114 &142970292
 MonoBehaviour:
@@ -4199,7 +4224,11 @@ MonoBehaviour:
   - {fileID: 349939207}
   - {fileID: 1957092497}
   - {fileID: 1143139664}
-  objectsToDeactivate: []
+  objectsToDeactivate:
+  - {fileID: 498083647}
+  - {fileID: 1697454300}
+  - {fileID: 1916413107}
+  - {fileID: 1555439331}
 --- !u!1 &143848785
 GameObject:
   m_ObjectHideFlags: 0
@@ -9570,7 +9599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &336729164
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13766,7 +13795,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498083647}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 10977a77db32cc14b9498ca40a3beac1, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 62305ea4f6eb6c94eb7b297b0a85d598, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -16722,14 +16751,14 @@ MonoBehaviour:
   - {fileID: 1663532209}
   - {fileID: 640049863}
   videosToDisable:
-  - {fileID: 9192041142114768530}
-  - {fileID: 9192041141679153472}
-  - {fileID: 9192041143153558169}
-  - {fileID: 9192041141998460214}
-  - {fileID: 9192041142587662889}
-  - {fileID: 9192041143470302370}
-  - {fileID: 9192041142668312570}
-  - {fileID: 9192041141877968359}
+  - {fileID: 9192041141962383293}
+  - {fileID: 684332764}
+  - {fileID: 1187701778}
+  - {fileID: 370727897}
+  - {fileID: 1862768915}
+  - {fileID: 613112500}
+  - {fileID: 1999594710}
+  - {fileID: 1803335120}
   horizontalLines: {fileID: 1734558992}
   nextInteractiveIkeality: {fileID: 142970289}
   firstVideo: {fileID: 0}
@@ -17229,7 +17258,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613112500}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 8426559aa0f50124eb5ef573f1c48d2e, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 6c295c41a0b55e54a9aa6ffcda686613, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -17930,11 +17959,11 @@ GameObject:
   - component: {fileID: 640049865}
   m_Layer: 0
   m_Name: text-normality (2)
-  m_TagString: Untagged
+  m_TagString: lastvideo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &640049864
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35535,7 +35564,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187701778}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 1edc747a2a790a7458859de6b1b53643, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 3d584a020aa005f4f9855d26d916b0da, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -37654,7 +37683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1251801501
 Transform:
   m_ObjectHideFlags: 0
@@ -44563,7 +44592,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1536433994
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44983,7 +45012,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555439331}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 615d5942be1ea944f97f56c634d411fd, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 93ed880a239a13647a96134cd1d199e0, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -44999,7 +45028,7 @@ VideoPlayer:
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
-  - 0
+  - 1
   m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
@@ -47803,7 +47832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1663532210
 RectTransform:
   m_ObjectHideFlags: 0
@@ -48376,7 +48405,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697454300}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: d2aad41e287d9c544833b5e97eb18c52, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: bda9d5008230b8748885bd28df5fd01d, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -54968,7 +54997,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916413107}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 3c6233244876944409baaf1d73e5f0f9, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 7f8fa394eedd65c42b081ec553f9a15e, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
