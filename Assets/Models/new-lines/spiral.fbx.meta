@@ -1,0 +1,517 @@
+fileFormatVersion: 2
+guid: 4da678bc5ca09524d92c32332e99d02c
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_10
+    second: {fileID: 2100000, guid: 4094e8fee96f69048bd0b77a4e8e6b3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_100
+    second: {fileID: 2100000, guid: cdcc596e21852c94695aca729cec3a84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_102
+    second: {fileID: 2100000, guid: 6dbdd21e49b512844afbcda764849fd5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_104
+    second: {fileID: 2100000, guid: 1d83c07e6376bfe4798cd92e30f188f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_106
+    second: {fileID: 2100000, guid: 300d7d26bb1825f4cb0776700c8284ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_108
+    second: {fileID: 2100000, guid: f0fcafdc916749d4abb49d20a8b2e58d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_110
+    second: {fileID: 2100000, guid: bb7f38f31a8b1224fb0e1f3cd756cbaa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_112
+    second: {fileID: 2100000, guid: e89ca7ba4cab6664bb739c4e7c6ac74e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_114
+    second: {fileID: 2100000, guid: 8aa4c77d3319a554482a021f605f10ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_116
+    second: {fileID: 2100000, guid: a3cfb315d0131e6419ba8b3242a26e27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_118
+    second: {fileID: 2100000, guid: 93851c53779cbc54992e32e9e5db2b3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_12
+    second: {fileID: 2100000, guid: 3526ec0df92417846a459db8730bc5f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_120
+    second: {fileID: 2100000, guid: c06f45df67a9c6a429ef8b0416e29950, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_122
+    second: {fileID: 2100000, guid: 711f9d3b361eec74c82ba04a0c6dff28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_124
+    second: {fileID: 2100000, guid: 5ebc3d047bf7d4f419c6ba29ebcedc52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_126
+    second: {fileID: 2100000, guid: 9a7231ae12ce3b34c93ef83d07f90095, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_128
+    second: {fileID: 2100000, guid: ea17f73243e43cc46aa9515cf4fc1a07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_130
+    second: {fileID: 2100000, guid: fa29b553de13b354db297de7af596836, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_132
+    second: {fileID: 2100000, guid: a04cb09b5335d2e499d904150b81b0e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_134
+    second: {fileID: 2100000, guid: 1ad949ef1a0842a4a801c202edb91d41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_136
+    second: {fileID: 2100000, guid: b6c02c8dd656f374b8cfcc5edf42b695, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_138
+    second: {fileID: 2100000, guid: f0aa9aaf18b5b7d4b9ba761c19ee92d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_14
+    second: {fileID: 2100000, guid: 487d6672b8de20f4fbc8a1b06285e3db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_140
+    second: {fileID: 2100000, guid: b8935b22878fb524390ebc2e7675a293, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_142
+    second: {fileID: 2100000, guid: ae38ff8d4dfed4646b7be36c1e8cacb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_144
+    second: {fileID: 2100000, guid: a607be179707efa4db61ea3ce0c952c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_146
+    second: {fileID: 2100000, guid: 274c96b253ce4f64399f36a16036eaab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_148
+    second: {fileID: 2100000, guid: aed6bf1bbb5b3314d8e24df39881e347, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_150
+    second: {fileID: 2100000, guid: 3edfa9973fab8c04296e853706f097c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_152
+    second: {fileID: 2100000, guid: 37d0ff707a1abcb4c8219ce5614f8838, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_154
+    second: {fileID: 2100000, guid: e45922cc666729d44a0416d14a798a46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_156
+    second: {fileID: 2100000, guid: b383246a964a1ca41a3f1065d6b20989, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_158
+    second: {fileID: 2100000, guid: bf01b12a1e83789459e3dbc251e2b882, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_16
+    second: {fileID: 2100000, guid: ab49398d0f9bda94ca8089a6c35e1d84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_160
+    second: {fileID: 2100000, guid: 4d556f196c2e9be488e9269de9631b13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_162
+    second: {fileID: 2100000, guid: 98971f792a54f604fa43c222fd6f93a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_164
+    second: {fileID: 2100000, guid: e11325e2162c14e47beac25e3f312b3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_166
+    second: {fileID: 2100000, guid: 7621459ee5d43144b81ecfcf87ee92ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_168
+    second: {fileID: 2100000, guid: 90581f727f69f334cb7809c0468a2ce6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_18
+    second: {fileID: 2100000, guid: 3c7e384af2e110e429d764f09976e238, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_2
+    second: {fileID: 2100000, guid: 50d1309b71152e340b5970b3d1feac0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_20
+    second: {fileID: 2100000, guid: dee491e52f41e6442b39c20679dd53df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_22
+    second: {fileID: 2100000, guid: 0708dffd0deb0e34485098855c7b152b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_24
+    second: {fileID: 2100000, guid: e9314179c38c1734da6aab2158ae7451, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_26
+    second: {fileID: 2100000, guid: 8323f3103b5bde2468ccdb9b9c1e2be6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_28
+    second: {fileID: 2100000, guid: 7a49ef5280f71c84191f7e21517f2b62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_30
+    second: {fileID: 2100000, guid: 26f31df2724d8ff468b55b7007101d9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_32
+    second: {fileID: 2100000, guid: 50ca1160ca7dd134897094da56046a8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_34
+    second: {fileID: 2100000, guid: 24683d526d83ba64eb3ecf2b6819c58e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_36
+    second: {fileID: 2100000, guid: 88028e1e7b8a1e74588346380292e929, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_38
+    second: {fileID: 2100000, guid: 01ff34e1e8d5da1489967edd82983865, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_4
+    second: {fileID: 2100000, guid: 8c925f58d6ba95d4c9cdb68b02d051ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_40
+    second: {fileID: 2100000, guid: 64d095af249d5ad4baa3073fdbf7c265, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_42
+    second: {fileID: 2100000, guid: 6c8f4e6faef483843a71c9aaa3877490, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_44
+    second: {fileID: 2100000, guid: cc6bdf37cdb466646ab75603bbe7cde4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_46
+    second: {fileID: 2100000, guid: ba3ad30a5b13f954cba0c14ccafc0998, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_48
+    second: {fileID: 2100000, guid: 41f5da7e18156904993d985c6eb1fd21, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_50
+    second: {fileID: 2100000, guid: b1f6d5c4b71fbf344aef9773b68c9dd6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_52
+    second: {fileID: 2100000, guid: d7a57ea1769301748a5d3706e3ad5589, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_54
+    second: {fileID: 2100000, guid: ba1eb3e32ab329c4ea065a272a943640, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_56
+    second: {fileID: 2100000, guid: 8e5bb94699ea73743b32362bc899282d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_58
+    second: {fileID: 2100000, guid: 6dfeb7b1db9254347a28f531aab347fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_6
+    second: {fileID: 2100000, guid: 587a0c0a82c6c6c47b43b36c1d7726dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_60
+    second: {fileID: 2100000, guid: 37c17346dea2cae4e9290be08c160b1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_62
+    second: {fileID: 2100000, guid: 8f8b90ff623690a43bad549587456e4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_64
+    second: {fileID: 2100000, guid: bba14fb40bd466e49bff0785b17c05db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_66
+    second: {fileID: 2100000, guid: c0b18a4934698ca479ff8dd958ac4e2b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_68
+    second: {fileID: 2100000, guid: 1e47648aac19a9a41bb74cf1ac6e8ada, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_70
+    second: {fileID: 2100000, guid: 2fea247c0895928458b0b3bb60595f35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_72
+    second: {fileID: 2100000, guid: bd144248031002942b607db30b424bb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_74
+    second: {fileID: 2100000, guid: 3a8a7eaa3a16bcf4f87a1e85c0f535c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_76
+    second: {fileID: 2100000, guid: 13259c787c127194c8ee96a3d6d55693, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_78
+    second: {fileID: 2100000, guid: 63952628263c4d147a725025252b7bf4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_8
+    second: {fileID: 2100000, guid: 667b607b74171c143a4e8c7f94b9a759, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_80
+    second: {fileID: 2100000, guid: bf5668a59b8bd474f8469f1582e2b127, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_82
+    second: {fileID: 2100000, guid: e3878ead4a5a08a49b0a5d6825e057ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_84
+    second: {fileID: 2100000, guid: da4d0b2af65cfdf41a8f9b4ca1a42e63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_86
+    second: {fileID: 2100000, guid: ebec3f020fad35b4eb816b51e03a4157, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_88
+    second: {fileID: 2100000, guid: e1eea75e697da7a46addce0b0d5c3261, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_90
+    second: {fileID: 2100000, guid: baba5be9180c28247bd52da8b11bb368, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_92
+    second: {fileID: 2100000, guid: 08ea8007de85bf348b7559614b70dafe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_94
+    second: {fileID: 2100000, guid: 79b6106e96b49b143be61c8268818d40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_96
+    second: {fileID: 2100000, guid: d5515e98c4fb8934793f448989f2469d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ikeae_spiral_globe_Material_98
+    second: {fileID: 2100000, guid: 0d209348d617f034693080510a97cbe7, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
