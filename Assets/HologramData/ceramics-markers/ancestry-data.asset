@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: ancestry-data
   m_EditorClassIdentifier: 
-  localPosX: 1.333101
-  localPosY: -1.304299
-  localPosZ: 1.337869
+  localPosX: 8.316
+  localPosY: 0.79
+  localPosZ: 7.016
   localRotx: 0
   localRoty: 0
   localRotz: 0
-  localSx: 0
-  localSy: 0
-  localSz: 0
+  localSx: 0.8918505
+  localSy: 0.8918502
+  localSz: 0.8918505

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: Line-productive
   m_EditorClassIdentifier: 
-  localPosX: 0.00000005960464
-  localPosY: 0.000003695488
-  localPosZ: 0.000002145767
+  localPosX: 0
+  localPosY: 1.36
+  localPosZ: 0.2939999
   localRotx: 90
   localRoty: 0
   localRotz: 90.00001
-  localSx: 0.0449345
-  localSy: 0.05
-  localSz: 0.05834374
+  localSx: 1
+  localSy: 1
+  localSz: 1

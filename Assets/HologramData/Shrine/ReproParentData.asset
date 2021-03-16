@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: ReproParentData
   m_EditorClassIdentifier: 
-  localPosX: 0
-  localPosY: 0
-  localPosZ: 0
+  localPosX: 0.31795
+  localPosY: 0.35159
+  localPosZ: -0.96353
   localRotx: 0
   localRoty: 0
   localRotz: 0
-  localSx: 1
-  localSy: 1
-  localSz: 1
+  localSx: 0.7635
+  localSy: 0.7635
+  localSz: 0.7635

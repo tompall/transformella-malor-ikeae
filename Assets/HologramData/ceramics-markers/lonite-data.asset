@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: lonite-data
   m_EditorClassIdentifier: 
-  localPosX: 1.132338
-  localPosY: -1.083239
-  localPosZ: 1.053978
+  localPosX: -10.151
+  localPosY: 0.71
+  localPosZ: 7.47
   localRotx: 0
   localRoty: -180.26
   localRotz: 0
+  localSx: 1
+  localSy: 1
+  localSz: 1

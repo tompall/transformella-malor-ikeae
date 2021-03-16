@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: ShrineData
   m_EditorClassIdentifier: 
-  localPosX: -1.26958
-  localPosY: 2.653936
-  localPosZ: 1.934307
+  localPosX: -27.29
+  localPosY: 1.13
+  localPosZ: 1.61
   localRotx: 0
   localRoty: 0
   localRotz: 0
-  localSx: 3.586397
-  localSy: 3.586401
-  localSz: 3.586397
+  localSx: 1.394157
+  localSy: 1.394157
+  localSz: 1.394157

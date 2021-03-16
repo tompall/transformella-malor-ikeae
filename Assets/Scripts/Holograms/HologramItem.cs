@@ -21,7 +21,7 @@ public class HologramItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hologramToSave.transform.localPosition = new Vector3(ItemData.localPosX, ItemData.localPosY, ItemData.localPosZ);
+        this.transform.localPosition = new Vector3(ItemData.localPosX, ItemData.localPosY, ItemData.localPosZ);
 
 
         // Quaternion m_HologramTargetRot *= Quaternion.Euler(ItemData.localRotx, ItemData.localRoty, ItemData.localRotz);
@@ -29,7 +29,7 @@ public class HologramItem : MonoBehaviour
         //   mesh.transform.localScale = new Vector3(pinchSlider.SliderValue, pinchSlider.SliderValue, pinchSlider.SliderValue);
         if (saveScale)
         {
-            hologramToSave.transform.localScale = new Vector3(ItemData.localSx, ItemData.localSy, ItemData.localSz);
+            this.transform.localScale = new Vector3(ItemData.localSx, ItemData.localSy, ItemData.localSz);
         }
     }
 
@@ -46,15 +46,15 @@ public class HologramItem : MonoBehaviour
 
     public void SaveLocalPos()
     {
-        ItemData.localPosX = hologramToSave.transform.localPosition.x;
-        ItemData.localPosY = hologramToSave.transform.localPosition.y;
-        ItemData.localPosZ = hologramToSave.transform.localPosition.z;
+        ItemData.localPosX = this.transform.localPosition.x;
+        ItemData.localPosY = this.transform.localPosition.y;
+        ItemData.localPosZ = this.transform.localPosition.z;
 
         if (saveScale)
         {
-            ItemData.localSx = hologramToSave.transform.localScale.x;
-            ItemData.localSy = hologramToSave.transform.localScale.y;
-            ItemData.localSz = hologramToSave.transform.localScale.z;
+            ItemData.localSx = this.transform.localScale.x;
+            ItemData.localSy = this.transform.localScale.y;
+            ItemData.localSz = this.transform.localScale.z;
         }
     }
 

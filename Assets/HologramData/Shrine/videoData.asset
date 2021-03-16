@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: videoData
   m_EditorClassIdentifier: 
-  localPosX: 0
-  localPosY: 0
-  localPosZ: 0
+  localPosX: -49.556
+  localPosY: 8.79
+  localPosZ: 0.84677
   localRotx: -180
   localRoty: 0
   localRotz: -180
-  localSx: 1
-  localSy: 1
-  localSz: 1
+  localSx: 0.2581184
+  localSy: 0.6468356
+  localSz: 0.1489559
