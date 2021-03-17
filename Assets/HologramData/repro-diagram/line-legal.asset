@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
-  m_Name: ReproParentData
+  m_Name: line-legal
   m_EditorClassIdentifier: 
-  localPosX: 1.001
-  localPosY: 0.708
-  localPosZ: -0.964
-  localRotx: 0
+  localPosX: 0
+  localPosY: 1.287
+  localPosZ: 1.237
+  localRotx: 90
   localRoty: 0
-  localRotz: 0
-  localSx: 0.7635
-  localSy: 0.7635
-  localSz: 0.7635
+  localRotz: 90
+  localSx: 1
+  localSy: 1
+  localSz: 1
