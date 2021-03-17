@@ -4058,6 +4058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 113987419}
   - component: {fileID: 113987418}
+  - component: {fileID: 113987420}
   - component: {fileID: 113987417}
   m_Layer: 0
   m_Name: SceneManager
@@ -4133,6 +4134,21 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - keyword: Restart Narrative
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 113987418}
+          m_MethodName: RestartNarrativeAnywhere
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Save Holograms
     response:
       m_PersistentCalls:
         m_Calls:
@@ -4249,6 +4265,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &113987420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113987416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114b68ff1a39acc4bb74bb9605638d3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataObjects:
+  - {fileID: 11400000, guid: 7f58f86ddf22d0f46903fd9d85dfdfdd, type: 2}
 --- !u!1001 &128958308
 PrefabInstance:
   m_ObjectHideFlags: 0

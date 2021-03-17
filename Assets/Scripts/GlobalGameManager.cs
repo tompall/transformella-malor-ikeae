@@ -23,6 +23,7 @@ public class GlobalGameManager : MonoBehaviour
         
     }
 
+
     public void RestartNarrativeAnywhere()
     {
         foreach (GameObject gob in objectsToReactivateOnRestart)
@@ -36,28 +37,6 @@ public class GlobalGameManager : MonoBehaviour
         }
     }
 
-    public void LoadCalibrationScene()
-    {
-        SceneManager.LoadScene("calibration-scene", LoadSceneMode.Single);
-    }
-
-    public void TestTest()
-    {
-        Debug.Log("button pressed");
-        
-    }
-
-    public void TestPush()
-    {
-        Debug.Log("button pushed");
-
-    }
-
-    public void TestRelease()
-    {
-        Debug.Log("button released");
-
-    }
-
+ 
 
 }
