@@ -16,7 +16,7 @@ MonoBehaviour:
   localPosY: 0.79
   localPosZ: -7.63
   localRotx: 0
-  localRoty: 0
+  localRoty: -180.26
   localRotz: 0
   localSx: 0.8918505
   localSy: 0.8918502

@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: HeartData
   m_EditorClassIdentifier: 
-  localPosX: 0
-  localPosY: 0
-  localPosZ: 3
+  localPosX: 0.62
+  localPosY: 0.776
+  localPosZ: 1.79
   localRotx: 0
-  localRoty: 0
+  localRoty: -135.987
   localRotz: 0
+  localSx: 0.7447942
+  localSy: 0.744795
+  localSz: 0.7447942

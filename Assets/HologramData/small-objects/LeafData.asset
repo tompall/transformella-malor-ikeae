@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: LeafData
   m_EditorClassIdentifier: 
-  localPosX: 6
-  localPosY: 0
-  localPosZ: 3
+  localPosX: -0.3371086
+  localPosY: 1.45
+  localPosZ: 4.72254
   localRotx: 0
   localRoty: 0
   localRotz: 0
+  localSx: 0.9920374
+  localSy: 0.9920382
+  localSz: 0.9920374
