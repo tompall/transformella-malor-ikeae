@@ -4152,8 +4152,8 @@ MonoBehaviour:
     response:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 113987418}
-          m_MethodName: RestartNarrativeAnywhere
+        - m_Target: {fileID: 113987420}
+          m_MethodName: SaveGame
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4221,7 +4221,7 @@ MonoBehaviour:
   - {fileID: 1536433993}
   - {fileID: 1663532209}
   - {fileID: 640049863}
-  - {fileID: 0}
+  - {fileID: 9192041141877968359}
   - {fileID: 1059868847}
   - {fileID: 751953797}
   - {fileID: 349939207}
@@ -4277,8 +4277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 114b68ff1a39acc4bb74bb9605638d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataObjects:
-  - {fileID: 11400000, guid: 7f58f86ddf22d0f46903fd9d85dfdfdd, type: 2}
+  dataObjects: {fileID: 0}
 --- !u!1001 &128958308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67989,6 +67988,22 @@ MonoBehaviour:
   - {fileID: 568836851}
   - {fileID: 1209127878}
   - {fileID: 989724838}
+  - {fileID: 877825001}
+  - {fileID: 1004638189}
+  - {fileID: 912207614}
+  - {fileID: 1792010717}
+  - {fileID: 518755345}
+  - {fileID: 923856955}
+  - {fileID: 1715857730}
+  - {fileID: 237866652}
+  - {fileID: 204142943}
+  - {fileID: 928376471}
+  - {fileID: 602641119}
+  - {fileID: 982152690}
+  - {fileID: 511860185}
+  - {fileID: 1921547920}
+  - {fileID: 1003128146}
+  - {fileID: 678662179}
   manipulatorComponents:
   - {fileID: 1541116364}
   - {fileID: 1952221168}
@@ -67998,6 +68013,14 @@ MonoBehaviour:
   - {fileID: 1518513258}
   - {fileID: 1653680959}
   - {fileID: 1787560245}
+  - {fileID: 112846424}
+  - {fileID: 1147771429}
+  - {fileID: 1143953287}
+  - {fileID: 682159497}
+  - {fileID: 46968610}
+  - {fileID: 1936118635}
+  - {fileID: 1180168099}
+  - {fileID: 1013004795}
   rendererComponents:
   - {fileID: 212867647}
   - {fileID: 1248411289}

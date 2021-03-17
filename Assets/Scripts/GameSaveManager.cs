@@ -7,20 +7,34 @@ using UnityEngine;
 public class GameSaveManager : MonoBehaviour
 {
 
-    public static GameSaveManager instance;
-
-    public HologramItemData[] dataObjects;
+   
+    public HologramItemData dataObjects;
 
     public void Awake()
     {
-        instance = this;
+        
 
-        LoadGame();
     }
-     public bool IsSaveFile()
+
+    public void Start()
+    {
+      
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadGame();
+        }
+    }
+
+    public bool IsSaveFile()
     {
         return Directory.Exists(Application.persistentDataPath + "/game_save");
     }
+
+
 
     public void SaveGame()
     {
@@ -43,6 +57,8 @@ public class GameSaveManager : MonoBehaviour
 
     public void LoadGame()
     {
+
+        Debug.Log("loadingnnnn");
         if (!Directory.Exists(Application.persistentDataPath + "/game_save/hologram_data"))
         {
             Directory.CreateDirectory(Application.persistentDataPath + "/game_save/hologram_data");
