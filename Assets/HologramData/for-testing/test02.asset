@@ -15,8 +15,8 @@ MonoBehaviour:
   localPosX: 0
   localPosY: 0
   localPosZ: 0
-  localRotx: 0
-  localRoty: 0
+  localRotx: 66
+  localRoty: 333
   localRotz: 0
   localSx: 0
   localSy: 0

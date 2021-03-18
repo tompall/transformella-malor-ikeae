@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: test01
   m_EditorClassIdentifier: 
-  localPosX: 0
-  localPosY: 0
-  localPosZ: 0
-  localRotx: 0
-  localRoty: 0
-  localRotz: 0
-  localSx: 0
-  localSy: 0
-  localSz: 0
+  localPosX: 34.94
+  localPosY: 82.9
+  localPosZ: 158.2
+  localRotx: 581.4
+  localRoty: 999
+  localRotz: 43.32
+  localSx: 57.12
+  localSy: 81.1
+  localSz: 51
