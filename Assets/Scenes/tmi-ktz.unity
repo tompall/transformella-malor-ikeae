@@ -5284,12 +5284,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataObjects:
-  - {fileID: 11400000, guid: 2d618c19b1cacda44bb666874ef6fa80, type: 2}
   - {fileID: 11400000, guid: d5639f1a1edca8c4eb8c9551e9aa3ad7, type: 2}
-  - {fileID: 11400000, guid: 0f04364de9a00a3419df83d0076ae778, type: 2}
+  - {fileID: 11400000, guid: 2d618c19b1cacda44bb666874ef6fa80, type: 2}
   - {fileID: 11400000, guid: 1458cbf65a1bbeb4ebe7ee8d9cbf243e, type: 2}
   - {fileID: 11400000, guid: ee9c4cffe645567488e6a68ff551d37f, type: 2}
   - {fileID: 11400000, guid: b8b6e0abcce81324a85f7fa84ebf5ffe, type: 2}
+  - {fileID: 11400000, guid: 0f04364de9a00a3419df83d0076ae778, type: 2}
+  - {fileID: 11400000, guid: 49f2b023ceb735c4fb12bcf35ac775c3, type: 2}
+  - {fileID: 11400000, guid: 04d9ea7357d67e4409bc443116338876, type: 2}
+  - {fileID: 11400000, guid: 7f58f86ddf22d0f46903fd9d85dfdfdd, type: 2}
+  - {fileID: 11400000, guid: cf546fcaa64b1e048b578974c3560819, type: 2}
   - {fileID: 11400000, guid: e9ae7b4a84f96cb488a127caec8feb1d, type: 2}
   - {fileID: 11400000, guid: 5e5cd8ed9ddf9564390183b84dd65ce6, type: 2}
   - {fileID: 11400000, guid: 6ea5ebe714661284ba48e5dbf9c27bd5, type: 2}
@@ -5301,10 +5305,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b2311d95e4f78e742a5f906c67c95d2f, type: 2}
   - {fileID: 11400000, guid: fac8baf8a3452fb4f8ef9213a9c1783d, type: 2}
   - {fileID: 11400000, guid: 6ee483908c279a0459636a163bafcd5f, type: 2}
-  - {fileID: 11400000, guid: 49f2b023ceb735c4fb12bcf35ac775c3, type: 2}
-  - {fileID: 11400000, guid: cf546fcaa64b1e048b578974c3560819, type: 2}
-  - {fileID: 11400000, guid: 7f58f86ddf22d0f46903fd9d85dfdfdd, type: 2}
-  - {fileID: 11400000, guid: 04d9ea7357d67e4409bc443116338876, type: 2}
   - {fileID: 11400000, guid: 059985d11d30b424ebcf392e6c06fdae, type: 2}
   - {fileID: 11400000, guid: 04c2b5545acb38b4186c77cc273bb5f0, type: 2}
   - {fileID: 11400000, guid: d8388e3ce56987748a1f8bb44b91c57f, type: 2}
@@ -48890,8 +48890,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1148311289}
-  - component: {fileID: 1148311294}
-  - component: {fileID: 1148311293}
   - component: {fileID: 1148311290}
   - component: {fileID: 1148311292}
   - component: {fileID: 1148311291}
@@ -48975,7 +48973,7 @@ MonoBehaviour:
   - {fileID: 1650522425}
   - {fileID: 1730686875}
   manipulatorComponents:
-  - {fileID: 1148311293}
+  - {fileID: 773244102}
   - {fileID: 1024556273}
   - {fileID: 37709328}
   - {fileID: 1833297271}
@@ -49011,93 +49009,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1148311293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148311288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 181cd563a8349c34ea8978b0bc8d9c7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hostTransform: {fileID: 1148311289}
-  manipulationType: 3
-  twoHandedManipulationType: 7
-  allowFarManipulation: 1
-  useForcesForNearManipulation: 0
-  oneHandRotationModeNear: 1
-  oneHandRotationModeFar: 1
-  releaseBehavior: 3
-  smoothingFar: 1
-  smoothingNear: 1
-  moveLerpTime: 0.001
-  rotateLerpTime: 0.001
-  scaleLerpTime: 0.001
-  enableConstraints: 1
-  constraintsManager: {fileID: 1148311294}
-  elasticsManager: {fileID: 0}
-  onManipulationStarted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 183148196}
-        m_MethodName: RemoveAnchorCermics
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onManipulationEnded:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 183148196}
-        m_MethodName: AddAnchorCeramics
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 183148196}
-        m_MethodName: SaveGameCeramics
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1148311294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148311288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a98de877dee5fc341b4eb59dfdab266c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoConstraintSelection: 1
-  selectedConstraints: []
 --- !u!1 &1148636049
 GameObject:
   m_ObjectHideFlags: 0
@@ -78359,8 +78270,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1952221170}
-  - component: {fileID: 1952221169}
-  - component: {fileID: 1952221168}
   - component: {fileID: 1952221167}
   - component: {fileID: 1952221171}
   - component: {fileID: 1952221166}
@@ -78417,7 +78326,7 @@ MonoBehaviour:
   - {fileID: 678662179}
   manipulatorComponents:
   - {fileID: 1541116364}
-  - {fileID: 1952221168}
+  - {fileID: 1541116364}
   - {fileID: 268373317}
   - {fileID: 894803784}
   - {fileID: 136629357}
@@ -78448,93 +78357,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1952221168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952221165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 181cd563a8349c34ea8978b0bc8d9c7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hostTransform: {fileID: 1952221170}
-  manipulationType: 3
-  twoHandedManipulationType: 7
-  allowFarManipulation: 1
-  useForcesForNearManipulation: 0
-  oneHandRotationModeNear: 1
-  oneHandRotationModeFar: 1
-  releaseBehavior: 3
-  smoothingFar: 1
-  smoothingNear: 1
-  moveLerpTime: 0.001
-  rotateLerpTime: 0.001
-  scaleLerpTime: 0.001
-  enableConstraints: 1
-  constraintsManager: {fileID: 1952221169}
-  elasticsManager: {fileID: 0}
-  onManipulationStarted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 183148196}
-        m_MethodName: RemoveAnchorSrhine
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onManipulationEnded:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 183148196}
-        m_MethodName: AddAnchorShrine
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 183148196}
-        m_MethodName: SaveGameShrine
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1952221169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952221165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a98de877dee5fc341b4eb59dfdab266c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoConstraintSelection: 1
-  selectedConstraints: []
 --- !u!4 &1952221170
 Transform:
   m_ObjectHideFlags: 0
