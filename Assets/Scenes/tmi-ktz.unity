@@ -242,6 +242,8 @@ MonoBehaviour:
   - {fileID: 2090731661}
   - {fileID: 591510598}
   objectsToDeactivate: []
+  activated: 0
+  activationTimeTarget: 3
 --- !u!1 &9642685
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,8 +520,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16127492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.81, y: 0.08, z: -1.08}
-  m_LocalScale: {x: 4.582596, y: 4.391775, z: 4.590336}
+  m_LocalPosition: {x: -0.6, y: 0.08, z: -0.31}
+  m_LocalScale: {x: 7.008622, y: 4.391775, z: 4.590336}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -5117,21 +5119,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - keyword: Restart Narrative
-    response:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 113987418}
-          m_MethodName: RestartNarrativeAnywhere
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - keyword: Save Holograms
     response:
       m_PersistentCalls:
@@ -6344,6 +6331,8 @@ MonoBehaviour:
   - {fileID: 1697454300}
   - {fileID: 1916413107}
   - {fileID: 1555439331}
+  activated: 0
+  activationTimeTarget: 3
 --- !u!1 &143848785
 GameObject:
   m_ObjectHideFlags: 0
@@ -8586,6 +8575,8 @@ MonoBehaviour:
   objectsToActivate:
   - {fileID: 1179583229}
   objectsToDeactivate: []
+  activated: 0
+  activationTimeTarget: 3
 --- !u!65 &198329704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8837,7 +8828,7 @@ Transform:
   m_LocalScale: {x: 19.130545, y: 11.137999, z: 18.530962}
   m_Children: []
   m_Father: {fileID: 1952221170}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: -89.261}
 --- !u!65 &212867646
 BoxCollider:
@@ -10549,7 +10540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 254245930}
   m_Layer: 0
-  m_Name: rotation-controls (3)
+  m_Name: rotation-controls-uterus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11234,7 +11225,7 @@ Transform:
   - {fileID: 727865256}
   - {fileID: 781950516}
   m_Father: {fileID: 1952221170}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &268373316
 BoxCollider:
@@ -14531,7 +14522,7 @@ GameObject:
   - component: {fileID: 335105159}
   m_Layer: 0
   m_Name: function
-  m_TagString: Untagged
+  m_TagString: activator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14562,8 +14553,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 11, y: 2, z: 1.3}
+  m_Center: {x: 1.03, y: 0, z: 0}
 --- !u!23 &335105155
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14669,6 +14660,8 @@ MonoBehaviour:
   objectsToActivate:
   - {fileID: 1251801500}
   objectsToDeactivate: []
+  activated: 0
+  activationTimeTarget: 3
 --- !u!114 &335105159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16567,7 +16560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 369630496}
   m_Layer: 0
-  m_Name: pivot (2)
+  m_Name: pivot-spiral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24796,6 +24789,8 @@ MonoBehaviour:
   objectsToActivate:
   - {fileID: 1718248418}
   objectsToDeactivate: []
+  activated: 0
+  activationTimeTarget: 3
 --- !u!114 &591510601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28610,7 +28605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 690054704}
   m_Layer: 0
-  m_Name: pivot (2)
+  m_Name: pivot-heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32676,14 +32671,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773244098}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.9800005, y: 6.9449997, z: -18.08}
+  m_LocalPosition: {x: 0.7699996, y: 6.9449997, z: 12.14}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 369630496}
   - {fileID: 1143701280}
   - {fileID: 69145071}
-  m_Father: {fileID: 1148311289}
-  m_RootOrder: 3
+  m_Father: {fileID: 1952221170}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &773244100
 BoxCollider:
@@ -41697,7 +41692,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989724838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0988524, y: 0.00007888718, z: -0.5357561}
+  m_LocalPosition: {x: -1.12, y: 0.00007888718, z: -0.727}
   m_LocalScale: {x: 1.0741705, y: 0.1343935, z: 0.22200862}
   m_Children:
   - {fileID: 331006719}
@@ -46148,7 +46143,7 @@ Transform:
   - {fileID: 961635859}
   - {fileID: 250206582}
   m_Father: {fileID: 1952221170}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 185, z: 0}
 --- !u!1 &1076625546
 GameObject:
@@ -46881,6 +46876,8 @@ MonoBehaviour:
   objectsToActivate:
   - {fileID: 542778504}
   objectsToDeactivate: []
+  activated: 0
+  activationTimeTarget: 3
 --- !u!1 &1089735471
 GameObject:
   m_ObjectHideFlags: 0
@@ -48518,7 +48515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1143701280}
   m_Layer: 0
-  m_Name: rotation-controls (1)
+  m_Name: rotation-controls-spiral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48914,7 +48911,6 @@ Transform:
   - {fileID: 166942448}
   - {fileID: 623259798}
   - {fileID: 144355763}
-  - {fileID: 773244099}
   - {fileID: 1373128441}
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -48952,8 +48948,8 @@ MonoBehaviour:
   - {fileID: 1466631443}
   - {fileID: 1050980858}
   - {fileID: 2020624644}
-  - {fileID: 369630495}
-  - {fileID: 1143701279}
+  - {fileID: 690054703}
+  - {fileID: 1245948746}
   - {fileID: 690054703}
   - {fileID: 1245948746}
   - {fileID: 763366730}
@@ -48979,7 +48975,7 @@ MonoBehaviour:
   - {fileID: 1833297271}
   - {fileID: 1764354168}
   - {fileID: 1637491883}
-  - {fileID: 773244102}
+  - {fileID: 1285990092}
   - {fileID: 1285990092}
   - {fileID: 1947509801}
   - {fileID: 268450798}
@@ -52166,7 +52162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209127878}
   m_LocalRotation: {x: -0.000000015832482, y: 0.7294785, z: 2.7755569e-17, w: -0.6840038}
-  m_LocalPosition: {x: 1.1377172, y: 0.14698674, z: -0.5885286}
+  m_LocalPosition: {x: 1.12, y: 0.14698674, z: -0.78}
   m_LocalScale: {x: 0.56309277, y: 0.33598384, z: 2.5609093}
   m_Children:
   - {fileID: 228372882}
@@ -53318,7 +53314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1245948747}
   m_Layer: 0
-  m_Name: rotation-controls (1)
+  m_Name: rotation-controls-heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53633,7 +53629,7 @@ Transform:
   m_LocalScale: {x: 29.427355, y: 24.651743, z: 22.366842}
   m_Children: []
   m_Father: {fileID: 1952221170}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1248411288
 BoxCollider:
@@ -55281,6 +55277,8 @@ MonoBehaviour:
   objectsToActivate:
   - {fileID: 475898791}
   objectsToDeactivate: []
+  activated: 0
+  activationTimeTarget: 3
 --- !u!114 &1288015945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57228,7 +57226,7 @@ Transform:
   - {fileID: 1833297268}
   - {fileID: 1764354166}
   m_Father: {fileID: 1148311289}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1374766176
 PrefabInstance:
@@ -60890,6 +60888,8 @@ MonoBehaviour:
   - {fileID: 2090731661}
   - {fileID: 591510598}
   objectsToDeactivate: []
+  activated: 0
+  activationTimeTarget: 3
 --- !u!1 &1465432973
 GameObject:
   m_ObjectHideFlags: 0
@@ -61096,6 +61096,8 @@ MonoBehaviour:
   - {fileID: 2090731661}
   - {fileID: 591510598}
   objectsToDeactivate: []
+  activated: 0
+  activationTimeTarget: 3
 --- !u!1 &1476035658
 GameObject:
   m_ObjectHideFlags: 0
@@ -63874,7 +63876,7 @@ Transform:
   - {fileID: 524523863}
   - {fileID: 1597218350}
   m_Father: {fileID: 1952221170}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1541116362
 BoxCollider:
@@ -69955,7 +69957,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761384548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.77, y: -0.04, z: -6.77}
+  m_LocalPosition: {x: -1.77, y: -0.04, z: -5.58}
   m_LocalScale: {x: 4.42692, y: 3.6961257, z: 3.2959547}
   m_Children: []
   m_Father: {fileID: 0}
@@ -70851,7 +70853,7 @@ Transform:
   - {fileID: 989724839}
   - {fileID: 335105153}
   m_Father: {fileID: 1952221170}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1787560243
 BoxCollider:
@@ -74800,7 +74802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1886597582}
   m_Layer: 0
-  m_Name: pivot (4)
+  m_Name: pivot-uterus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78324,6 +78326,8 @@ MonoBehaviour:
   - {fileID: 1921547920}
   - {fileID: 1003128146}
   - {fileID: 678662179}
+  - {fileID: 369630495}
+  - {fileID: 1143701279}
   manipulatorComponents:
   - {fileID: 1541116364}
   - {fileID: 1541116364}
@@ -78341,6 +78345,7 @@ MonoBehaviour:
   - {fileID: 1936118635}
   - {fileID: 1180168099}
   - {fileID: 1013004795}
+  - {fileID: 773244102}
   rendererComponents:
   - {fileID: 212867647}
   - {fileID: 1248411289}
@@ -78368,6 +78373,7 @@ Transform:
   m_LocalPosition: {x: -2.15, y: -1.75, z: -7.29}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
+  - {fileID: 773244099}
   - {fileID: 1074691763}
   - {fileID: 1248411287}
   - {fileID: 1787560242}
@@ -81815,6 +81821,8 @@ MonoBehaviour:
   - {fileID: 2090731661}
   - {fileID: 591510598}
   objectsToDeactivate: []
+  activated: 0
+  activationTimeTarget: 3
 --- !u!1 &2048260804
 GameObject:
   m_ObjectHideFlags: 0
@@ -84171,6 +84179,8 @@ MonoBehaviour:
   objectsToActivate:
   - {fileID: 988549046}
   objectsToDeactivate: []
+  activated: 0
+  activationTimeTarget: 3
 --- !u!1 &2093227289
 GameObject:
   m_ObjectHideFlags: 0

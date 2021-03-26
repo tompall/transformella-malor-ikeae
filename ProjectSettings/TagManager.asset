@@ -11,6 +11,7 @@ TagManager:
   - solosound
   - spawnlines
   - lastvideo
+  - activator
   layers:
   - Default
   - TransparentFX

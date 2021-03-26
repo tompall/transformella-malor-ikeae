@@ -57,7 +57,7 @@ public class WorldAnchorManager : MonoBehaviour
     {
         if (!savedRootShrine)
         {
-            savedRootShrine = this.store.Save("rootGameObjectShrine5", anchorShrine);
+            savedRootShrine = this.store.Save("rootGameObjectShrinef", anchorShrine);
           
             Debug.Log(anchorShrine.transform.position);
         }
@@ -67,7 +67,7 @@ public class WorldAnchorManager : MonoBehaviour
     {
         if (!savedRootCeramics)
         {
-            savedRootCeramics = this.store.Save("rootGameObjectCeramics5", anchorCeramics);
+            savedRootCeramics = this.store.Save("rootGameObjectCeramicsf", anchorCeramics);
 
             Debug.Log(anchorCeramics.transform.position);
         }
@@ -75,7 +75,7 @@ public class WorldAnchorManager : MonoBehaviour
 
     private void LoadGameShrine()
     {
-        savedRootShrine = store.Load("rootGameObjectShrine5", rootGameObjectShrine);
+        savedRootShrine = store.Load("rootGameObjectShrinef", rootGameObjectShrine);
 
         if (!this.savedRootShrine)
         {
@@ -87,7 +87,7 @@ public class WorldAnchorManager : MonoBehaviour
 
     private void LoadGameCeramics()
     {
-        savedRootShrine = store.Load("rootGameObjectCeramics5", rootGameObjectCeramics);
+        savedRootShrine = store.Load("rootGameObjectCeramicsf", rootGameObjectCeramics);
 
         if (!this.savedRootCeramics)
         {
@@ -102,7 +102,7 @@ public class WorldAnchorManager : MonoBehaviour
 
     private void ResetPositioningShrine()
     {
-        store.Delete("rootGameObjectShrine5");
+        store.Delete("rootGameObjectShrinef");
         savedRootShrine = false;
 
         // or 
@@ -113,7 +113,7 @@ public class WorldAnchorManager : MonoBehaviour
 
     private void ResetPositioningCeramics()
     {
-        store.Delete("rootGameObjectCeramics5");
+        store.Delete("rootGameObjectCeramicsf");
         savedRootCeramics = false;
 
         // or 

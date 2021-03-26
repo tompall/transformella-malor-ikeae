@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: Spiral-data
   m_EditorClassIdentifier: 
-  localPosX: -9.98
+  localPosX: 0.7699996
   localPosY: 6.945
-  localPosZ: -18.08
+  localPosZ: 12.14
   localRotx: 0
   localRoty: 0
   localRotz: 0
