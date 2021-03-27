@@ -14,7 +14,7 @@ public class GameObjectActivator : MonoBehaviour
 
     public bool gazeActivated;
 
-    public float activationTimeTarget = 3f;
+    public float activationTimeTarget = 5f;
     private float activationTimer;
 
     // Start is called before the first frame update
