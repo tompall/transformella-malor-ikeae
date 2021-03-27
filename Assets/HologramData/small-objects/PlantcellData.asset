@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: PlantcellData
   m_EditorClassIdentifier: 
-  localPosX: -2.56
-  localPosY: 0.29
-  localPosZ: -0.86
+  localPosX: -4.62
+  localPosY: 1.681238
+  localPosZ: 3.28
   localRotx: 0
   localRoty: 0
   localRotz: 0
-  localSx: 0.0147562
-  localSy: 0.01475621
-  localSz: 0.0147562
+  localSx: 0.03437062
+  localSy: 0.03437063
+  localSz: 0.03437062

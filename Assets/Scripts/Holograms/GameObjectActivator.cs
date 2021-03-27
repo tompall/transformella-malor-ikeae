@@ -56,6 +56,11 @@ public class GameObjectActivator : MonoBehaviour
 
                         }
                     }
+                    if (this.gameObject.GetComponent<EnableVideosLines>() != null)
+                    {
+                        this.gameObject.GetComponent<EnableVideosLines>().StartVideos();
+                        this.gameObject.GetComponent<EnableVideosLines>().StopVideos();
+                    }
                 }
             }
             else

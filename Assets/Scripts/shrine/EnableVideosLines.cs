@@ -29,7 +29,7 @@ public class EnableVideosLines : MonoBehaviour
 
         if (nextInteractiveIkeality != null)
         {
-            nextInteractiveIkeality.GetComponent<Interactable>().enabled = false;
+            nextInteractiveIkeality.GetComponent<BoxCollider>().enabled = false;
         }
 
         firstVideo.loopPointReached += EndReached;
@@ -43,6 +43,7 @@ public class EnableVideosLines : MonoBehaviour
         {
             secondVideo.Play();
             secondVideo.SetDirectAudioVolume(0, 1f);
+            secondVideo.gameObject.AddComponent<SilenceVideos>();
 
         }
     }
@@ -86,7 +87,7 @@ public class EnableVideosLines : MonoBehaviour
             {
                 if (nextInteractiveIkeality != null)
                 {
-                    nextInteractiveIkeality.GetComponent<Interactable>().enabled = true;
+                    nextInteractiveIkeality.GetComponent<BoxCollider>().enabled = true;
                 }
             }
 

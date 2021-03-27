@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: beadData
   m_EditorClassIdentifier: 
-  localPosX: -0.2200001
-  localPosY: 0.8
-  localPosZ: 3.030002
+  localPosX: 2.896
+  localPosY: 0.3526613
+  localPosZ: 4.247
   localRotx: 0
   localRoty: 0
   localRotz: 0
-  localSx: 1
-  localSy: 1
-  localSz: 1
+  localSx: 0.429326
+  localSy: 0.429326
+  localSz: 0.429326

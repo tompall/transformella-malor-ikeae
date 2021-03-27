@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: Rock2Data
   m_EditorClassIdentifier: 
-  localPosX: -3.36
-  localPosY: 0.97
-  localPosZ: 6.81
+  localPosX: -2.021001
+  localPosY: -0.01535296
+  localPosZ: -1.258001
   localRotx: 0
   localRoty: 0
   localRotz: 0
-  localSx: 0.2443694
-  localSy: 0.2443695
-  localSz: 0.2443694
+  localSx: 0.1049142
+  localSy: 0.1049142
+  localSz: 0.1049142
