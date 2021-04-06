@@ -60,6 +60,10 @@ public class GameSaveManager : MonoBehaviour
                 dataObjects[i].localPosY = si.GetHologramitems()[i].localPosY;
                 dataObjects[i].localPosZ = si.GetHologramitems()[i].localPosZ;
 
+                dataObjects[i].localParentRotx = si.GetHologramitems()[i].localParentRotx;
+                dataObjects[i].localParentRoty = si.GetHologramitems()[i].localParentRoty;
+                dataObjects[i].localParentRotz = si.GetHologramitems()[i].localParentRotz;
+
                 dataObjects[i].localRotx = si.GetHologramitems()[i].localRotx;
                 dataObjects[i].localRoty = si.GetHologramitems()[i].localRoty;
                 dataObjects[i].localRotz = si.GetHologramitems()[i].localRotz;
@@ -70,7 +74,7 @@ public class GameSaveManager : MonoBehaviour
             }
 
             //dataObjects = si.GetHologramitems();
-            Debug.Log("LOADING dataObjects: " + dataObjects[0].localPosY);
+           // Debug.Log("LOADING dataObjects: " + dataObjects[0].localPosY);
         }
  
     }

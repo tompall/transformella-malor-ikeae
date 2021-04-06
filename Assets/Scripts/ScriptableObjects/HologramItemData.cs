@@ -9,6 +9,10 @@ public class HologramItemData : ScriptableObject
     public float localPosY;
     public float localPosZ;
 
+    public float localParentRotx;
+    public float localParentRoty;
+    public float localParentRotz;
+
     public float localRotx;
     public float localRoty;
     public float localRotz;

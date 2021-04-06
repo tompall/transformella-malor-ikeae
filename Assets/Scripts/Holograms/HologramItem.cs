@@ -22,7 +22,7 @@ public class HologramItem : MonoBehaviour
     void Start()
     {
         this.transform.localPosition = new Vector3(ItemData.localPosX, ItemData.localPosY, ItemData.localPosZ);
-
+        this.transform.localRotation = Quaternion.Euler(ItemData.localParentRotx, ItemData.localParentRoty, ItemData.localParentRotz);
 
         // Quaternion m_HologramTargetRot *= Quaternion.Euler(ItemData.localRotx, ItemData.localRoty, ItemData.localRotz);
         hologramToSave.transform.localRotation = Quaternion.Euler(ItemData.localRotx, ItemData.localRoty, ItemData.localRotz);
@@ -31,6 +31,8 @@ public class HologramItem : MonoBehaviour
         {
             this.transform.localScale = new Vector3(ItemData.localSx, ItemData.localSy, ItemData.localSz);
         }
+
+      
     }
 
     // Update is called once per frame
@@ -46,9 +48,15 @@ public class HologramItem : MonoBehaviour
 
     public void SaveLocalPos()
     {
+        SaveLocalRot();
+
         ItemData.localPosX = this.transform.localPosition.x;
         ItemData.localPosY = this.transform.localPosition.y;
         ItemData.localPosZ = this.transform.localPosition.z;
+
+        ItemData.localParentRotx = this.transform.localEulerAngles.x;
+        ItemData.localParentRoty = this.transform.localEulerAngles.y;
+        ItemData.localParentRotz = this.transform.localEulerAngles.z;
 
         if (saveScale)
         {
