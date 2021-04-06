@@ -60,9 +60,9 @@ public class HologramItem : MonoBehaviour
 
     public void SaveLocalRot()
     {
-        ItemData.localRotx = hologramToSave.transform.eulerAngles.x;
-        ItemData.localRoty = hologramToSave.transform.eulerAngles.y;
-        ItemData.localRotz = hologramToSave.transform.eulerAngles.z;
+        ItemData.localRotx = hologramToSave.transform.localEulerAngles.x;
+        ItemData.localRoty = hologramToSave.transform.localEulerAngles.y;
+        ItemData.localRotz = hologramToSave.transform.localEulerAngles.z;
     }
 
    /* public void ParentRotationControls()
