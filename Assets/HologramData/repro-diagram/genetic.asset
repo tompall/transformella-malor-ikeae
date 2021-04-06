@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: genetic
   m_EditorClassIdentifier: 
   localPosX: 0
-  localPosY: 0.596
-  localPosZ: 0.73
+  localPosY: 0.779
+  localPosZ: 0.594
   localRotx: 90
   localRoty: 0
   localRotz: 90
