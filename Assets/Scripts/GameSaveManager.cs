@@ -8,14 +8,16 @@ using Newtonsoft.Json;
 
 public class GameSaveManager : MonoBehaviour
 {
-
+    [SerializeField]
     private string jsonPath = "/game_save/hologram_save.json";
+
     public List<HologramItemData> dataObjects;
 
     public SaveItems si = new SaveItems();
 
     public void Awake()
     {
+        Debug.Log("Persistent data path: "+Application.persistentDataPath);
        si.SetHologramitems(dataObjects);
 
         LoadGame();
@@ -86,7 +88,7 @@ public class GameSaveManager : MonoBehaviour
             Directory.CreateDirectory(Application.persistentDataPath + "/game_save");
         }
 
-        string path = Application.persistentDataPath + "/game_save/hologram_save.json";
+        string path = Application.persistentDataPath + jsonPath;
         si.SetHologramitems(dataObjects);
         Debug.Log("SAVING dataObjects: " + dataObjects[0].localPosY);
         string json = JsonConvert.SerializeObject(si);
