@@ -13,13 +13,19 @@ public class WorldAnchorManager : MonoBehaviour
     
     public WorldAnchor anchorCeramics;
 
+    public WorldAnchor anchorNegentropy;
+
     public bool savedRootShrine;
 
     public bool savedRootCeramics;
 
+    public bool savedRootNegentropy;
+
     public GameObject rootGameObjectShrine;
 
     public GameObject rootGameObjectCeramics;
+
+    public GameObject rootGameObjectNegentropy;
 
     // Start is called before the first frame update
     void Start()
@@ -73,6 +79,16 @@ public class WorldAnchorManager : MonoBehaviour
         }
     }
 
+    public void SaveGameNegentropy()
+    {
+        if (!savedRootNegentropy)
+        {
+            savedRootCeramics = this.store.Save("rootGameObjectNegentropyf1", anchorNegentropy);
+
+            Debug.Log(anchorNegentropy.transform.position);
+        }
+    }
+
     private void LoadGameShrine()
     {
         savedRootShrine = store.Load("rootGameObjectShrinef1", rootGameObjectShrine);
@@ -97,6 +113,17 @@ public class WorldAnchorManager : MonoBehaviour
         }
     }
 
+    private void LoadGameNegentropy()
+    {
+        savedRootShrine = store.Load("rootGameObjectNegentropyf1", rootGameObjectNegentropy);
+
+        if (!this.savedRootNegentropy)
+        {
+            Debug.Log("no Negentropy anchor was saved");
+            //  SaveGameCeramics();
+            //  Debug.Log("Saving.." + anchorCeramics.transform.position);
+        }
+    }
 
 
 
@@ -121,6 +148,18 @@ public class WorldAnchorManager : MonoBehaviour
         // for all data delete
 
     }
+
+    private void ResetPositioningNegentropy()
+    {
+        store.Delete("rootGameObjectNegentropyf1");
+        savedRootCeramics = false;
+
+        // or 
+        // store.Clear();
+        // for all data delete
+
+    }
+
     public void RemoveAnchorSrhine()
     {
         ResetPositioningShrine();
@@ -131,10 +170,17 @@ public class WorldAnchorManager : MonoBehaviour
 
     public void RemoveAnchorCermics()
     {
-        ResetPositioningShrine();
+        ResetPositioningCeramics();
         var sphereAnchor = rootGameObjectCeramics.GetComponent<WorldAnchor>();
         Destroy(sphereAnchor);
 
+    }
+
+    public void RemoveAnchorNegentropy()
+    {
+        ResetPositioningNegentropy();
+        var sphereAnchor = rootGameObjectNegentropy.GetComponent<WorldAnchor>();
+        Destroy(sphereAnchor);
     }
 
     public void AddAnchorShrine()
@@ -145,6 +191,11 @@ public class WorldAnchorManager : MonoBehaviour
     public void AddAnchorCeramics()
     {
         anchorCeramics = rootGameObjectCeramics.AddComponent<WorldAnchor>();
+    }
+
+    public void AddAnchorNegentropy()
+    {
+        anchorNegentropy = rootGameObjectNegentropy.AddComponent<WorldAnchor>();
     }
 
 }

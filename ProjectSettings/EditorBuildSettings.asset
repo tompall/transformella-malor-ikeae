@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/tmi-ktz.unity
-    guid: fa1839a3a46ddd24eaca68442177ab8e
+    path: Assets/Scenes/tmi-hmkw-wombroom-separate-001.unity
+    guid: cf98f7ce177e5154db8811d24e3c9b1f
   m_configObjects: {}
