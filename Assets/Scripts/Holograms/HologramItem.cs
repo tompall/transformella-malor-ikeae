@@ -13,10 +13,22 @@ public class HologramItem : MonoBehaviour
     public HologramItemData ItemData;
     public Transform hologramToSave;
 
+    [SerializeField]
+    private bool isEditorResettable = false;
     public bool saveScale;
-  //  public Transform rotationControls;
-   // public Transform controlParent;
 
+    private Vector3 editorPosition;
+    private Quaternion editorRotation;
+
+    //  public Transform rotationControls;
+    // public Transform controlParent;
+
+    private void Awake()
+    {
+        editorPosition = transform.localPosition;
+        editorRotation = transform.localRotation;
+        print(editorPosition);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +50,15 @@ public class HologramItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!isEditorResettable) return;
+
+        if (Input.GetKeyUp(KeyCode.Alpha0)){
+            Debug.Log("Reset position attempt");
+            transform.localPosition = editorPosition;
+            transform.localRotation = editorRotation;
+            SaveLocalPos();
+            SaveLocalRot();
+        }
     }
 
     public void SaveHologramData()

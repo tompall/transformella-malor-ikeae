@@ -10,11 +10,20 @@ public class NarrativeTrigger : MonoBehaviour
 
     public AudioSource audioSource;
     public Transform visualGuideTarget;
+    public float delayBefore = 1f;
+    public float delayAfter = 1f;
+
+    [SerializeField]
+    private bool playAudio = true;
+
+    [SerializeField]
+    private bool deactivateOnExit = true;
 
     public UnityEvent OnPlayerEnter = new UnityEvent();
     public UnityEvent OnPlayerExit = new UnityEvent();
 
-    public UnityEvent OnAudioFinished = new UnityEvent();
+    public UnityEvent OnMoveNext = new UnityEvent();
+
 
     private bool isActive = false;
 
@@ -27,9 +36,7 @@ public class NarrativeTrigger : MonoBehaviour
 
         isActive = false;
         
-        OnAudioFinished.Invoke();
-
-        deactivated = true;
+        OnMoveNext.Invoke();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -43,8 +50,13 @@ public class NarrativeTrigger : MonoBehaviour
 
             OnPlayerEnter.Invoke();
 
-            if(!audioSource.isPlaying)
+
+            //if should play audio, play
+            if (!audioSource.isPlaying && playAudio)
                 audioSource.Play();
+            else
+                //if shouldnt play audio, trigger delayed MoveNext event
+                StartCoroutine(TriggerMoveNextWithoutAudio());
         }
     }
 
@@ -60,8 +72,16 @@ public class NarrativeTrigger : MonoBehaviour
             audioSource.Stop();
 
             OnPlayerExit.Invoke();
+            OnMoveNext.Invoke();
 
-            deactivated = true;
+            if(deactivateOnExit)
+                deactivated = true;
         }
+    }
+
+    private IEnumerator TriggerMoveNextWithoutAudio()
+    {
+        yield return new WaitForSecondsRealtime(delayBefore);
+        OnMoveNext.Invoke();
     }
 }

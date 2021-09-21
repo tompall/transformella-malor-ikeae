@@ -10,11 +10,15 @@ public class NarrativeSystem : MonoBehaviour
 
     public NarrativeTrigger activeTrigger;
 
+    public LineRenderer line;
+
     private void Awake()
     {
         int index = 0;
-        foreach(var a in narrativeAtoms)
+        foreach(var atom in narrativeAtoms)
         {
+            atom.nID = index;
+
             var nextIndex = index + 1;
 
             if (nextIndex < narrativeAtoms.Count)
@@ -22,29 +26,55 @@ public class NarrativeSystem : MonoBehaviour
                 var moveVisualAction = new UnityAction(() =>
                 {
                     print("moveAction");
+                    
+                    var next = narrativeAtoms[nextIndex];
 
-                    StartCoroutine(visualGuide.MoveTo(narrativeAtoms[nextIndex].visualGuideTarget.position));
+                    StartCoroutine(visualGuide.MoveTo(next.visualGuideTarget.position, next.delayBefore, next.delayAfter));
                 });
 
-                a.OnPlayerEnter.AddListener(() =>
+                atom.OnPlayerEnter.AddListener(() =>
                 {
-                    activeTrigger = a;
+                    activeTrigger = atom;
                 });
 
-                a.OnAudioFinished.AddListener(moveVisualAction);
+                atom.OnMoveNext.AddListener(moveVisualAction);
             }
 
             index++;
         }
+
     }
 
     private void Start()
     {
         StartNarrative();
+
+
+        DrawGuideLine();
+    }
+
+    private void DrawGuideLine()
+    {
+        line.positionCount = narrativeAtoms.Count;
+
+        var yOffset = -1f;
+
+        var linePos = Vector3.one;
+
+        int index = 0;
+        foreach(var atom in narrativeAtoms)
+        {
+            linePos = atom.visualGuideTarget.position;
+
+            print("Line position: " +linePos);
+            linePos.y = yOffset;
+            line.SetPosition(index, linePos);
+            index++;
+        }
     }
 
     private void StartNarrative()
     {
-        StartCoroutine(visualGuide.MoveTo(narrativeAtoms[0].visualGuideTarget.position));
+        StartCoroutine(visualGuide.MoveTo(narrativeAtoms[0].visualGuideTarget.position, narrativeAtoms[0].delayBefore, narrativeAtoms[0].delayAfter));
     }
 }

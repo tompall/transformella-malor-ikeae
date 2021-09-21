@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
   m_Name: NarrativeHologram_01
   m_EditorClassIdentifier: 
-  localPosX: 0
-  localPosY: 0
-  localPosZ: 1.93
+  localPosX: -1.09
+  localPosY: -0.18
+  localPosZ: 0.008
   localParentRotx: 0
   localParentRoty: 0
   localParentRotz: 0

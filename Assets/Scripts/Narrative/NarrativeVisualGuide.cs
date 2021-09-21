@@ -5,8 +5,10 @@ public class NarrativeVisualGuide : MonoBehaviour
 {
     public AnimationCurve animationCurve;
     public float duration = 3f;
-    public IEnumerator MoveTo(Vector3 targetPosition)
+    public IEnumerator MoveTo(Vector3 targetPosition, float delayBefore = 0, float delayAfter = 0)
     {
+        yield return new WaitForSecondsRealtime(delayBefore);
+
         Vector3 startPosition = transform.position;
 
         float journey = 0f;
@@ -23,5 +25,7 @@ public class NarrativeVisualGuide : MonoBehaviour
             yield return null;
         }
         transform.position = targetPosition;
+
+        yield return new WaitForSecondsRealtime(delayAfter);
     }
 }
