@@ -295,15 +295,17 @@ MonoBehaviour:
   nID: 0
   audioSource: {fileID: 3830241768768199470}
   visualGuideTarget: {fileID: 7637414407647047740}
-  delayBeforeSound: 0
-  delayAfterSound: 5
+  delayBefore: 1
+  delayAfter: 1
+  playAudio: 1
+  deactivateOnExit: 1
   OnPlayerEnter:
     m_PersistentCalls:
       m_Calls: []
   OnPlayerExit:
     m_PersistentCalls:
       m_Calls: []
-  OnAudioFinished:
+  OnMoveNext:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &3830241768768199464
@@ -605,7 +607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 181cd563a8349c34ea8978b0bc8d9c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hostTransform: {fileID: 3830241767456464606}
+  hostTransform: {fileID: 5922724745261844015}
   manipulationType: 3
   twoHandedManipulationType: 7
   allowFarManipulation: 1
