@@ -5,7 +5,7 @@ public class NarrativeVisualGuide : MonoBehaviour
 {
     public AnimationCurve animationCurve;
     public float duration = 3f;
-    public IEnumerator MoveTo(Vector3 targetPosition, float delayBefore = 0, float delayAfter = 0)
+    public IEnumerator MoveTo(Vector3 targetPosition, NarrativeTrigger nextAtom, float delayBefore = 0, float delayAfter = 0)
     {
         yield return new WaitForSecondsRealtime(delayBefore);
 
@@ -27,5 +27,6 @@ public class NarrativeVisualGuide : MonoBehaviour
         transform.position = targetPosition;
 
         yield return new WaitForSecondsRealtime(delayAfter);
+        nextAtom.gameObject.SetActive(true);
     }
 }

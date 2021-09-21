@@ -50,7 +50,6 @@ public class NarrativeTrigger : MonoBehaviour
 
             OnPlayerEnter.Invoke();
 
-
             //if should play audio, play
             if (!audioSource.isPlaying && playAudio)
                 audioSource.Play();
@@ -66,13 +65,10 @@ public class NarrativeTrigger : MonoBehaviour
 
         if (other.tag == "Player" || other.tag == "MainCamera")
         {
-            isActive = false;
-
             Debug.Log("Player left: " + nID);
-            audioSource.Stop();
+            //audioSource.Stop();
 
             OnPlayerExit.Invoke();
-            OnMoveNext.Invoke();
 
             if(deactivateOnExit)
                 deactivated = true;

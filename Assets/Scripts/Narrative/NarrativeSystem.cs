@@ -21,6 +21,11 @@ public class NarrativeSystem : MonoBehaviour
 
             var nextIndex = index + 1;
 
+            if(index != 0)
+            {
+                atom.gameObject.SetActive(false);
+            }
+
             if (nextIndex < narrativeAtoms.Count)
             {
                 var moveVisualAction = new UnityAction(() =>
@@ -29,7 +34,7 @@ public class NarrativeSystem : MonoBehaviour
                     
                     var next = narrativeAtoms[nextIndex];
 
-                    StartCoroutine(visualGuide.MoveTo(next.visualGuideTarget.position, next.delayBefore, next.delayAfter));
+                    StartCoroutine(visualGuide.MoveTo(next.visualGuideTarget.position, next, next.delayBefore, next.delayAfter));
                 });
 
                 atom.OnPlayerEnter.AddListener(() =>
@@ -75,6 +80,6 @@ public class NarrativeSystem : MonoBehaviour
 
     private void StartNarrative()
     {
-        StartCoroutine(visualGuide.MoveTo(narrativeAtoms[0].visualGuideTarget.position, narrativeAtoms[0].delayBefore, narrativeAtoms[0].delayAfter));
+        StartCoroutine(visualGuide.MoveTo(narrativeAtoms[0].visualGuideTarget.position, narrativeAtoms[1], narrativeAtoms[0].delayBefore, narrativeAtoms[0].delayAfter));
     }
 }
