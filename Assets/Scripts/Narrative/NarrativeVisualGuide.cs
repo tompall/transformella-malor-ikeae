@@ -4,7 +4,8 @@ using UnityEngine;
 public class NarrativeVisualGuide : MonoBehaviour
 {
     public AnimationCurve animationCurve;
-    public float duration = 3f;
+    private float duration = 3f;
+    public float speed = 10f;
     public IEnumerator MoveTo(Vector3 targetPosition, NarrativeTrigger nextAtom, float delayBefore = 0, float delayAfter = 0)
     {
         yield return new WaitForSecondsRealtime(delayBefore);
@@ -12,6 +13,8 @@ public class NarrativeVisualGuide : MonoBehaviour
         Vector3 startPosition = transform.position;
 
         float journey = 0f;
+
+        duration = Vector3.Distance(transform.position, targetPosition) / speed;
 
         while (journey <= duration)
         {

@@ -12,6 +12,8 @@ public class NarrativeSystem : MonoBehaviour
 
     public LineRenderer line;
 
+    public GameObject startAnnotation;
+
     private void Awake()
     {
         int index = 0;
@@ -21,10 +23,7 @@ public class NarrativeSystem : MonoBehaviour
 
             var nextIndex = index + 1;
 
-            if(index != 0)
-            {
-                atom.gameObject.SetActive(false);
-            }
+            atom.gameObject.SetActive(false);
 
             if (nextIndex < narrativeAtoms.Count)
             {
@@ -52,10 +51,8 @@ public class NarrativeSystem : MonoBehaviour
 
     private void Start()
     {
-        StartNarrative();
-
-
-        DrawGuideLine();
+        //StartNarrative();
+        visualGuide.gameObject.SetActive(false);
     }
 
     private void DrawGuideLine()
@@ -78,8 +75,12 @@ public class NarrativeSystem : MonoBehaviour
         }
     }
 
-    private void StartNarrative()
+    public void StartNarrative()
     {
+        startAnnotation.SetActive(false);
+        narrativeAtoms[0].gameObject.SetActive(true);
+        visualGuide.gameObject.SetActive(true);
+        DrawGuideLine();
         StartCoroutine(visualGuide.MoveTo(narrativeAtoms[0].visualGuideTarget.position, narrativeAtoms[1], narrativeAtoms[0].delayBefore, narrativeAtoms[0].delayAfter));
     }
 }

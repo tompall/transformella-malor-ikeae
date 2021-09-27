@@ -60,7 +60,7 @@ MonoBehaviour:
       axisConstraint: 0
   - localizationKey: 
     keyword: Restart Narrative
-    keyCode: 110
+    keyCode: 266
     action:
       id: 0
       description: Toggle Profiler
@@ -75,6 +75,13 @@ MonoBehaviour:
   - localizationKey: 
     keyword: Reset All
     keyCode: 120
+    action:
+      id: 0
+      description: Toggle Profiler
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Start Narrative
+    keyCode: 110
     action:
       id: 0
       description: Toggle Profiler
