@@ -15,17 +15,23 @@ public class WorldAnchorManager : MonoBehaviour
 
     public WorldAnchor anchorNegentropy;
 
+    public WorldAnchor anchorWorld;
+
     public bool savedRootShrine;
 
     public bool savedRootCeramics;
 
     public bool savedRootNegentropy;
 
+    public bool saveWorld;
+
     public GameObject rootGameObjectShrine;
 
     public GameObject rootGameObjectCeramics;
 
     public GameObject rootGameObjectNegentropy;
+
+    public GameObject rootGameObjectWorld;
 
     // Start is called before the first frame update
     void Start()
@@ -44,9 +50,9 @@ public class WorldAnchorManager : MonoBehaviour
         this.store = store;
 
         ListAnchors();
-        LoadGameShrine();
-        LoadGameCeramics();
-       
+        //LoadGameShrine();
+        //LoadGameCeramics();
+        LoadGameWorld();
     }
 
     private void ListAnchors()
@@ -63,9 +69,19 @@ public class WorldAnchorManager : MonoBehaviour
     {
         if (!savedRootShrine)
         {
-            savedRootShrine = this.store.Save("rootGameObjectShrinef1", anchorShrine);
-          
+            savedRootShrine = this.store.Save("rootGameObjectShrinef2", anchorShrine);
+
             Debug.Log(anchorShrine.transform.position);
+        }
+    }
+
+    public void SaveGameWorld()
+    {
+        if (!savedRootShrine)
+        {
+            saveWorld = this.store.Save("rootGameObjectWorldf2", anchorWorld);
+          
+            Debug.Log(anchorWorld.transform.position);
         }
     }
 
@@ -96,8 +112,20 @@ public class WorldAnchorManager : MonoBehaviour
         if (!this.savedRootShrine)
         {
             Debug.Log("no shrine anchor was saved");
-          //  SaveGameShrine();
-          //  Debug.Log("Saving.." + anchorShrine.transform.position);
+            //  SaveGameShrine();
+            //  Debug.Log("Saving.." + anchorShrine.transform.position);
+        }
+    }
+
+    private void LoadGameWorld()
+    {
+        saveWorld = store.Load("rootGameObjectWorldf2", rootGameObjectWorld);
+
+        if (!this.saveWorld)
+        {
+            Debug.Log("no world anchor was saved");
+            //  SaveGameShrine();
+            //  Debug.Log("Saving.." + anchorShrine.transform.position);
         }
     }
 
@@ -135,6 +163,17 @@ public class WorldAnchorManager : MonoBehaviour
         // or 
        // store.Clear();
        // for all data delete
+
+    }
+
+    private void ResetPositioningWorld()
+    {
+        store.Delete("rootGameObjectWorldf2");
+        saveWorld = false;
+
+        // or 
+        // store.Clear();
+        // for all data delete
 
     }
 
@@ -181,6 +220,17 @@ public class WorldAnchorManager : MonoBehaviour
         ResetPositioningNegentropy();
         var sphereAnchor = rootGameObjectNegentropy.GetComponent<WorldAnchor>();
         Destroy(sphereAnchor);
+    }
+
+    public void RemoveAnchorWorld()
+    {
+        ResetPositioningNegentropy();
+        var sphereAnchor = rootGameObjectWorld.GetComponent<WorldAnchor>();
+        Destroy(sphereAnchor);
+    }
+    public void AddAnchorWorld()
+    {
+        anchorWorld = rootGameObjectWorld.AddComponent<WorldAnchor>();
     }
 
     public void AddAnchorShrine()

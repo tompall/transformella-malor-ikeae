@@ -86,3 +86,10 @@ MonoBehaviour:
       id: 0
       description: Toggle Profiler
       axisConstraint: 0
+  - localizationKey: 
+    keyword: Close Transformella
+    keyCode: 27
+    action:
+      id: 0
+      description: Toggle Profiler
+      axisConstraint: 0
