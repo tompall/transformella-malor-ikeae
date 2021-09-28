@@ -299,6 +299,7 @@ MonoBehaviour:
   delayAfter: 1
   playAudio: 1
   deactivateOnExit: 1
+  annotation: {fileID: 7637414406675178077}
   OnPlayerEnter:
     m_PersistentCalls:
       m_Calls: []

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.XR.WSA.Persistence;
 using UnityEngine.XR.WSA;
 using System;
+using System.Linq;
 
 public class WorldAnchorManager : MonoBehaviour
 {
@@ -21,12 +22,6 @@ public class WorldAnchorManager : MonoBehaviour
 
     private void Awake()
     {
-        int index = 0;
-        foreach(var anchor in anchors)
-        {
-            anchorDB.Add(anchor, saveAnchors[index]);
-            index++;
-        }   
     }
 
     void Start()
@@ -54,13 +49,15 @@ public class WorldAnchorManager : MonoBehaviour
 
     public void SaveGameWorld()
     {
-        foreach(var kv in anchorDB)
+        for(int i = 0; i < anchors.Count; i++)
         {
-            if (!kv.Value)
+            var isSaved = saveAnchors[i];
+
+            if (!isSaved)
             {
-                Debug.Log(anchorDB[kv.Key]);
+                var anchor = anchors[i];
                 if (this.store != null)
-                    anchorDB[kv.Key] = this.store.Save(kv.Key.gameObject.name, kv.Key);
+                    saveAnchors[i] = this.store.Save(anchor.gameObject.name, anchor);
                 else
                     Debug.LogError("No store found");
             }
@@ -69,20 +66,22 @@ public class WorldAnchorManager : MonoBehaviour
 
     private void LoadGameWorld()
     {
-        var index = 0;
-        foreach (var kv in anchorDB)
+        for (int i = 0; i < anchors.Count; i++)
         {
-            anchorDB[kv.Key] = this.store.Load(kv.Key.gameObject.name, rootObjects[index]);
-            index++;
+            var anchor = anchors[i];
+            if (this.store != null)
+                saveAnchors[i] = this.store.Load(anchor.gameObject.name, rootObjects[i]);
+            else
+                Debug.LogError("No store found");
         }
     }
 
     public void ClearAllAnchors()
     {
         this.store.Clear();
-        foreach(var kv in anchorDB)
+        for (int i = 0; i < anchors.Count; i++)
         {
-            anchorDB[kv.Key] = false;
+            saveAnchors[i] = false;
         }
     }
 }

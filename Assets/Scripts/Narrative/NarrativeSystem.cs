@@ -31,6 +31,8 @@ public class NarrativeSystem : MonoBehaviour
 
             atom.gameObject.SetActive(false);
 
+            atom.SetAnnotation("Narrative Atom " + atom.nID);
+
             if (nextIndex < narrativeAtoms.Count)
             {
                 var moveVisualAction = new UnityAction(() =>
@@ -79,7 +81,7 @@ public class NarrativeSystem : MonoBehaviour
     {
         line.positionCount = narrativeAtoms.Count;
 
-        var yOffset = -1f;
+        var yOffset = -0.5f;
 
         var linePos = Vector3.one;
 
@@ -88,7 +90,7 @@ public class NarrativeSystem : MonoBehaviour
         {
             linePos = atom.visualGuideTarget.position;
 
-            linePos.y = yOffset;
+            linePos.y += yOffset;
             line.SetPosition(index, linePos);
             index++;
         }

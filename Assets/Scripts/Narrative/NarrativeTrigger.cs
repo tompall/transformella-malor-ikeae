@@ -19,6 +19,9 @@ public class NarrativeTrigger : MonoBehaviour
     [SerializeField]
     private bool deactivateOnExit = true;
 
+    [SerializeField]
+    private TextMesh annotation;
+
     public UnityEvent OnPlayerEnter = new UnityEvent();
     public UnityEvent OnPlayerExit = new UnityEvent();
 
@@ -37,6 +40,11 @@ public class NarrativeTrigger : MonoBehaviour
         isActive = false;
         
         OnMoveNext.Invoke();
+    }
+
+    public void SetAnnotation(string text)
+    {
+        this.annotation.text = text;
     }
 
     private void OnTriggerEnter(Collider other)
