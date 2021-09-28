@@ -6,7 +6,7 @@ public class NarrativeVisualGuide : MonoBehaviour
     public AnimationCurve animationCurve;
     private float duration = 3f;
     public float speed = 10f;
-    public IEnumerator MoveTo(Vector3 targetPosition, NarrativeTrigger nextAtom, float delayBefore = 0, float delayAfter = 0)
+    public IEnumerator MoveTo(Transform target, NarrativeTrigger nextAtom, float delayBefore = 0, float delayAfter = 0)
     {
         yield return new WaitForSecondsRealtime(delayBefore);
 
@@ -14,7 +14,7 @@ public class NarrativeVisualGuide : MonoBehaviour
 
         float journey = 0f;
 
-        duration = Vector3.Distance(transform.position, targetPosition) / speed;
+        duration = Vector3.Distance(transform.position, target.position) / speed;
 
         while (journey <= duration)
         {
@@ -24,10 +24,10 @@ public class NarrativeVisualGuide : MonoBehaviour
 
             float curvePercent = animationCurve.Evaluate(percent);
 
-            transform.position = Vector3.LerpUnclamped(startPosition, targetPosition, curvePercent);
+            transform.position = Vector3.LerpUnclamped(startPosition, target.position, curvePercent);
             yield return null;
         }
-        transform.position = targetPosition;
+        transform.position = target.position;
 
         yield return new WaitForSecondsRealtime(delayAfter);
         nextAtom.gameObject.SetActive(true);

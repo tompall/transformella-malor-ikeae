@@ -14,6 +14,12 @@ public class NarrativeSystem : MonoBehaviour
 
     public GameObject startAnnotation;
 
+    public float lineUpdateCounter = 0;
+
+    public float lineUpdateFrequency = 1f;
+
+    private bool canUpdateLine = false;
+
     private void Awake()
     {
         int index = 0;
@@ -33,7 +39,7 @@ public class NarrativeSystem : MonoBehaviour
                     
                     var next = narrativeAtoms[nextIndex];
 
-                    StartCoroutine(visualGuide.MoveTo(next.visualGuideTarget.position, next, next.delayBefore, next.delayAfter));
+                    StartCoroutine(visualGuide.MoveTo(next.visualGuideTarget, next, next.delayBefore, next.delayAfter));
                 });
 
                 atom.OnPlayerEnter.AddListener(() =>
@@ -55,6 +61,20 @@ public class NarrativeSystem : MonoBehaviour
         visualGuide.gameObject.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (!canUpdateLine) return;
+        
+        if(lineUpdateCounter >= lineUpdateFrequency)
+        {
+            DrawGuideLine();
+            lineUpdateCounter = 0;
+            print("updating line");
+        }
+
+        lineUpdateCounter += Time.deltaTime;
+    }
+
     private void DrawGuideLine()
     {
         line.positionCount = narrativeAtoms.Count;
@@ -68,7 +88,6 @@ public class NarrativeSystem : MonoBehaviour
         {
             linePos = atom.visualGuideTarget.position;
 
-            print("Line position: " +linePos);
             linePos.y = yOffset;
             line.SetPosition(index, linePos);
             index++;
@@ -81,6 +100,7 @@ public class NarrativeSystem : MonoBehaviour
         narrativeAtoms[0].gameObject.SetActive(true);
         visualGuide.gameObject.SetActive(true);
         DrawGuideLine();
-        StartCoroutine(visualGuide.MoveTo(narrativeAtoms[0].visualGuideTarget.position, narrativeAtoms[1], narrativeAtoms[0].delayBefore, narrativeAtoms[0].delayAfter));
+        canUpdateLine = true;
+        StartCoroutine(visualGuide.MoveTo(narrativeAtoms[0].visualGuideTarget, narrativeAtoms[1], narrativeAtoms[0].delayBefore, narrativeAtoms[0].delayAfter));
     }
 }
