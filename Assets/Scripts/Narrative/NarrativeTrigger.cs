@@ -13,8 +13,7 @@ public class NarrativeTrigger : MonoBehaviour
     public float delayBefore = 1f;
     public float delayAfter = 1f;
 
-    [SerializeField]
-    private float speedOfOrb = 1f;
+    public float speedOfOrb = 1f;
 
     [SerializeField]
     private bool playAudio = true;

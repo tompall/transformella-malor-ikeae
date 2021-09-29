@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 3830241767456464600}
   - component: {fileID: 3830241767456464603}
   - component: {fileID: 3830241767456464602}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,8 +236,8 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3830241767456464613}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -297,6 +297,7 @@ MonoBehaviour:
   visualGuideTarget: {fileID: 7637414407647047740}
   delayBefore: 1
   delayAfter: 1
+  speedOfOrb: 1
   playAudio: 1
   deactivateOnExit: 1
   annotation: {fileID: 7637414406675178077}
@@ -578,7 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab99b280dd606e94f887727c9b84ce7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemData: {fileID: 11400000, guid: 1ee25365dcb2f484da210317fa92e8d2, type: 2}
+  ItemData: {fileID: 0}
   hologramToSave: {fileID: 5922724745261844015}
   isEditorResettable: 0
   saveScale: 0

@@ -10,6 +10,8 @@ public class NarrativeVisualGuide : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(delayBefore);
 
+        nextAtom.gameObject.SetActive(true);
+
         Vector3 startPosition = transform.position;
 
         float journey = 0f;
@@ -30,6 +32,5 @@ public class NarrativeVisualGuide : MonoBehaviour
         transform.position = target.position;
 
         yield return new WaitForSecondsRealtime(delayAfter);
-        nextAtom.gameObject.SetActive(true);
     }
 }

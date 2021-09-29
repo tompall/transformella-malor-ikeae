@@ -41,6 +41,8 @@ public class NarrativeSystem : MonoBehaviour
                     
                     var next = narrativeAtoms[nextIndex];
 
+                    visualGuide.speed = next.speedOfOrb;
+
                     StartCoroutine(visualGuide.MoveTo(next.visualGuideTarget, next, next.delayBefore, next.delayAfter));
                 });
 
