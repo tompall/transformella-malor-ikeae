@@ -13,7 +13,7 @@ public class NarrativeVisualGuide : MonoBehaviour
     
     public int round = 0;
 
-    public IEnumerator MoveTo(Transform target, NarrativeTrigger targetAtom, NarrativeTrigger nextAtom, float delayBefore = 0, float delayAfter = 0)
+    public IEnumerator MoveTo(Transform target, NarrativeTrigger targetAtom, NarrativeTrigger nextAtom, float delayBefore = 0, float delayAfter = 0, bool toFloor = true)
     {
         isMoving = true;
 
@@ -39,57 +39,23 @@ public class NarrativeVisualGuide : MonoBehaviour
             float curvePercent = animationCurve.Evaluate(percent);
 
             tPos = target.position;
-
-            tPos.y = -0.9f;
+    
+            if(toFloor)
+                tPos.y = -0.9f;
 
             transform.position = Vector3.LerpUnclamped(startPosition, tPos, curvePercent);
             yield return null;
         }
         //transform.position = tPos;
 
-        if (targetAtom.playAudioOnTrigger)
+
+        if (targetAtom.playAudioOnTrigger && !targetAtom.playAudio)
             targetAtom.gameObject.SetActive(true);
+
+        yield return new WaitForSecondsRealtime(delayAfter);
+
 
         isMoving = false;
 
-        yield return new WaitForSecondsRealtime(delayAfter);
-    }
-
-    public void RunSequence(NarrativeTrigger nt)
-    {
-        //StartCoroutine(StartSequence(nt, 0));
-    }
-
-    public IEnumerator StartSequence(NarrativeTrigger nt, int nextIndex )
-    {
-        if (nt.sequence.Count < nextIndex) yield break;
-
-        var target = nt.sequence[nextIndex];
-
-        Vector3 startPosition = transform.position;
-
-        float journey = 0f;
-
-        duration = Vector3.Distance(transform.position, target.position) / speed;
-
-        var tPos = Vector3.zero;
-
-        while (journey <= duration)
-        {
-            journey = journey + Time.deltaTime;
-
-            float percent = Mathf.Clamp01(journey / duration);
-
-            float curvePercent = animationCurve.Evaluate(percent);
-
-            tPos = target.position;
-
-            tPos.y = -0.9f;
-
-            transform.position = Vector3.LerpUnclamped(startPosition, tPos, curvePercent);
-            yield return null;
-        }
-
-        StartCoroutine(StartSequence(nt, nextIndex + 1));
     }
 }

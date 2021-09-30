@@ -118,8 +118,9 @@ public class NarrativeSystem : MonoBehaviour
         lineUpdateCounter += Time.deltaTime;
     }
 
-    private void DrawGuideLine()
+    public void DrawGuideLine()
     {
+        canUpdateLine = true;
         line.positionCount = narrativeAtoms.Count;
 
         var yOffset = -1f;
@@ -142,9 +143,8 @@ public class NarrativeSystem : MonoBehaviour
         startAnnotation.SetActive(false);
         narrativeAtoms[0].gameObject.SetActive(true);
         visualGuide.gameObject.SetActive(true);
-        DrawGuideLine();
-        canUpdateLine = true;
-        StartCoroutine(visualGuide.MoveTo(narrativeAtoms[0].visualGuideTarget, narrativeAtoms[1], narrativeAtoms[2], narrativeAtoms[0].delayBefore, narrativeAtoms[0].delayAfter));
+        //DrawGuideLine();
+        StartCoroutine(visualGuide.MoveTo(narrativeAtoms[0].visualGuideTarget, narrativeAtoms[1], narrativeAtoms[2], narrativeAtoms[0].delayBefore, narrativeAtoms[0].delayAfter, false));
     }
 
     public void BreakNarrative(NarrativeTrigger trigger)

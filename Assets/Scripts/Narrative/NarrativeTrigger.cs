@@ -84,6 +84,7 @@ public class NarrativeTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.LogWarning("Triggerenter+ " + gameObject.name);
+
         if (deactivated) return;
 
         if (other.tag == "Player" || other.tag == "MainCamera")
