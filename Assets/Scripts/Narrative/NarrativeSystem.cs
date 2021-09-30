@@ -28,8 +28,11 @@ public class NarrativeSystem : MonoBehaviour
 
     private float totalNarrativePoints;
 
+    public static NarrativeSystem instance;
+
     private void Awake()
     {
+        instance = this;
         int index = 0;
         totalNarrativePoints = narrativeAtoms.Count;
         foreach(var atom in narrativeAtoms)
@@ -44,17 +47,13 @@ public class NarrativeSystem : MonoBehaviour
 
             if (nextIndex < narrativeAtoms.Count)
             {
+                var next = narrativeAtoms[nextIndex];
+
                 var moveVisualAction = new UnityAction(() =>
                 {
-                    print("moveAction");
-                    
-                    var next = narrativeAtoms[nextIndex];
-
                     visualGuide.speed = next.speedOfOrb;
 
-                    LineGradientUpdate(nextIndex);
-
-                    StartCoroutine(visualGuide.MoveTo(next.visualGuideTarget, next, next.delayBefore, next.delayAfter));
+                    StartCoroutine(visualGuide.MoveTo(next.visualGuideTarget, next, narrativeAtoms[nextIndex+1], next.delayBefore, next.delayAfter));
                 });
 
                 atom.OnPlayerEnter.AddListener(() =>
@@ -62,35 +61,39 @@ public class NarrativeSystem : MonoBehaviour
                     activeTrigger = atom;
                 });
 
+                //if (next.autopilot && !next.playAudio) return;
+
                 atom.OnMoveNext.AddListener(moveVisualAction);
             }
 
             index++;
         }
 
-        float alpha = 1.0f;
-        var gradient = new Gradient();
-        gradient.SetKeys(
-            new GradientColorKey[] { new GradientColorKey(activeLineColor, 0f), new GradientColorKey(inactiveLineColor, 1f) },
-            new GradientAlphaKey[] { new GradientAlphaKey(0f, 0f), new GradientAlphaKey(0, 0f + 0.1f) }
-        );
+        //float alpha = 1.0f;
+        //var gradient = new Gradient();
+        //gradient.SetKeys(
+        //    new GradientColorKey[] { new GradientColorKey(activeLineColor, 0f), new GradientColorKey(inactiveLineColor, 1f) },
+        //    new GradientAlphaKey[] { new GradientAlphaKey(0f, 0f), new GradientAlphaKey(0, 0f + 0.1f) }
+        //);
 
-        line.colorGradient = gradient;
+        //line.colorGradient = gradient;
+
+        //LineGradientUpdate(0);
     }
 
     private void LineGradientUpdate(float currentIndex)
     {
-        float currentProgress = currentIndex / totalNarrativePoints;
+        //float currentProgress = currentIndex / totalNarrativePoints;
 
-        Debug.Log("Current progress of line: " + currentProgress);
-        float alpha = 1.0f;
-        var gradient = new Gradient();
-        gradient.SetKeys(
-            new GradientColorKey[] { new GradientColorKey(activeLineColor, currentProgress + lineGradientOffset), new GradientColorKey(inactiveLineColor, currentProgress + lineGradientOffset*2) },
-            new GradientAlphaKey[] { new GradientAlphaKey(alpha, currentProgress + 0.05f), new GradientAlphaKey(0, currentProgress + 0.1f) }
-        );
+        //Debug.Log("Current progress of line: " + currentProgress);
+        //float alpha = 1.0f;
+        //var gradient = new Gradient();
+        //gradient.SetKeys(
+        //    new GradientColorKey[] { new GradientColorKey(activeLineColor, currentProgress + lineGradientOffset), new GradientColorKey(inactiveLineColor, currentProgress + lineGradientOffset*2) },
+        //    new GradientAlphaKey[] { new GradientAlphaKey(alpha, currentProgress + 0.05f), new GradientAlphaKey(0, currentProgress + 0.1f) }
+        //);
 
-        line.colorGradient = gradient;
+        //line.colorGradient = gradient;
     }
 
     private void Start()
@@ -141,7 +144,7 @@ public class NarrativeSystem : MonoBehaviour
         visualGuide.gameObject.SetActive(true);
         DrawGuideLine();
         canUpdateLine = true;
-        StartCoroutine(visualGuide.MoveTo(narrativeAtoms[0].visualGuideTarget, narrativeAtoms[1], narrativeAtoms[0].delayBefore, narrativeAtoms[0].delayAfter));
+        StartCoroutine(visualGuide.MoveTo(narrativeAtoms[0].visualGuideTarget, narrativeAtoms[1], narrativeAtoms[2], narrativeAtoms[0].delayBefore, narrativeAtoms[0].delayAfter));
     }
 
     public void BreakNarrative(NarrativeTrigger trigger)
@@ -150,6 +153,6 @@ public class NarrativeSystem : MonoBehaviour
         var nextIndex = narrativeAtoms.IndexOf(trigger) + 1;
         trigger.gameObject.SetActive(true);
         Debug.Log("Next: " + trigger.gameObject.name + " After that: " + narrativeAtoms[nextIndex].gameObject.name);
-        StartCoroutine(visualGuide.MoveTo(trigger.visualGuideTarget, narrativeAtoms[nextIndex], trigger.delayBefore, trigger.delayAfter));
+        StartCoroutine(visualGuide.MoveTo(trigger.visualGuideTarget, narrativeAtoms[nextIndex], narrativeAtoms[nextIndex+1], trigger.delayBefore, trigger.delayAfter));
     }
 }

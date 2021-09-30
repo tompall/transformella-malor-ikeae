@@ -11,6 +11,8 @@ public class NarrativeTrigger : MonoBehaviour
     public AudioSource audioSource;
     public Transform visualGuideTarget;
 
+    public List<Transform> sequence;
+
     public bool autopilot = false;
 
     public float delayBefore = 1f;
@@ -19,10 +21,12 @@ public class NarrativeTrigger : MonoBehaviour
     public float speedOfOrb = 1f;
 
     [SerializeField]
-    private bool playAudio = true;
+    public bool playAudio = true;
+
+    public bool playAudioOnTrigger = true;
 
     [SerializeField]
-    private bool deactivateOnExit = true;
+    private bool deactivateOnExit = true;   
 
     [SerializeField]
     private TextMesh annotation;
@@ -32,20 +36,26 @@ public class NarrativeTrigger : MonoBehaviour
 
     public UnityEvent OnMoveNext = new UnityEvent();
 
+    public UnityEvent OnAudioFinished = new UnityEvent();
+
     private bool isActive = false;
 
     private bool deactivated = false;
 
+    public bool hasBallArrived = false;
+
     private void OnEnable()
     {
-        if(isActive && autopilot)
-        {
-            if (!audioSource.isPlaying && playAudio)
-                audioSource.Play();
-            else
-                //if shouldnt play audio, trigger delayed MoveNext event
-                StartCoroutine(TriggerMoveNextWithoutAudio());
-        }
+        //if(isActive && autopilot)
+        //{
+        //    if (!audioSource.isPlaying && playAudio)
+        //        audioSource.Play();
+        //    else
+        //        //if shouldnt play audio, trigger delayed MoveNext event
+        //        StartCoroutine(TriggerMoveNextWithoutAudio());
+        //}
+
+        gameObject.name = "Trigger " + nID;
     }
     private void Update()
     {
@@ -54,8 +64,16 @@ public class NarrativeTrigger : MonoBehaviour
         if (audioSource.isPlaying) return;
 
         isActive = false;
-        
-        OnMoveNext.Invoke();
+
+        OnAudioFinished.Invoke();
+
+        if (playAudioOnTrigger || autopilot)
+        {
+            Debug.Log("Update trigger");
+            OnMoveNext.Invoke();
+        }
+
+        Debug.Log("Audio finished: " + gameObject.name+" > " + nID);
     }
 
     public void SetAnnotation(string text)
@@ -65,6 +83,7 @@ public class NarrativeTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.LogWarning("Triggerenter+ " + gameObject.name);
         if (deactivated) return;
 
         if (other.tag == "Player" || other.tag == "MainCamera")
@@ -74,10 +93,15 @@ public class NarrativeTrigger : MonoBehaviour
 
             OnPlayerEnter.Invoke();
 
-            if (autopilot) return;
+            if (autopilot) {
+                if (!audioSource.isPlaying && playAudio)
+                    audioSource.Play();
+                OnMoveNext.Invoke();
+                return;
+            } 
 
             //if should play audio, play
-            if (!audioSource.isPlaying && playAudio)
+            if (!audioSource.isPlaying && playAudio && playAudioOnTrigger)
                 audioSource.Play();
             else
                 //if shouldnt play audio, trigger delayed MoveNext event
@@ -101,7 +125,7 @@ public class NarrativeTrigger : MonoBehaviour
         }
     }
 
-    private IEnumerator TriggerMoveNextWithoutAudio()
+    public IEnumerator TriggerMoveNextWithoutAudio()
     {
         yield return new WaitForSecondsRealtime(delayBefore);
         OnMoveNext.Invoke();

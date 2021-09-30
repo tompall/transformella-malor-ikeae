@@ -29,7 +29,6 @@ public class HologramItem : MonoBehaviour
         editorPosition = transform.localPosition;
         editorRotation = transform.localRotation;
         editorScale = transform.localScale;
-        print(editorPosition);
     }
 
     // Start is called before the first frame update
