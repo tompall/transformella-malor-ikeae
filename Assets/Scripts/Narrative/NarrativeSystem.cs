@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Linq;
 
 public class NarrativeSystem : MonoBehaviour
 {
@@ -14,15 +15,23 @@ public class NarrativeSystem : MonoBehaviour
 
     public GameObject startAnnotation;
 
+    public Color activeLineColor;
+    public Color inactiveLineColor;
+
+    public float lineGradientOffset = 0.15f;
+
     public float lineUpdateCounter = 0;
 
     public float lineUpdateFrequency = 1f;
 
     private bool canUpdateLine = false;
 
+    private float totalNarrativePoints;
+
     private void Awake()
     {
         int index = 0;
+        totalNarrativePoints = narrativeAtoms.Count;
         foreach(var atom in narrativeAtoms)
         {
             atom.nID = index;
@@ -43,6 +52,8 @@ public class NarrativeSystem : MonoBehaviour
 
                     visualGuide.speed = next.speedOfOrb;
 
+                    LineGradientUpdate(nextIndex);
+
                     StartCoroutine(visualGuide.MoveTo(next.visualGuideTarget, next, next.delayBefore, next.delayAfter));
                 });
 
@@ -57,12 +68,37 @@ public class NarrativeSystem : MonoBehaviour
             index++;
         }
 
+        float alpha = 1.0f;
+        var gradient = new Gradient();
+        gradient.SetKeys(
+            new GradientColorKey[] { new GradientColorKey(activeLineColor, 0f), new GradientColorKey(inactiveLineColor, 1f) },
+            new GradientAlphaKey[] { new GradientAlphaKey(0f, 0f), new GradientAlphaKey(0, 0f + 0.1f) }
+        );
+
+        line.colorGradient = gradient;
+    }
+
+    private void LineGradientUpdate(float currentIndex)
+    {
+        float currentProgress = currentIndex / totalNarrativePoints;
+
+        Debug.Log("Current progress of line: " + currentProgress);
+        float alpha = 1.0f;
+        var gradient = new Gradient();
+        gradient.SetKeys(
+            new GradientColorKey[] { new GradientColorKey(activeLineColor, currentProgress + lineGradientOffset), new GradientColorKey(inactiveLineColor, currentProgress + lineGradientOffset*2) },
+            new GradientAlphaKey[] { new GradientAlphaKey(alpha, currentProgress + 0.05f), new GradientAlphaKey(0, currentProgress + 0.1f) }
+        );
+
+        line.colorGradient = gradient;
     }
 
     private void Start()
     {
         //StartNarrative();
         visualGuide.gameObject.SetActive(false);
+
+        line.material = new Material(Shader.Find("Sprites/Default"));
     }
 
     private void Update()
@@ -73,7 +109,7 @@ public class NarrativeSystem : MonoBehaviour
         {
             DrawGuideLine();
             lineUpdateCounter = 0;
-            print("updating line");
+            //print("updating line");
         }
 
         lineUpdateCounter += Time.deltaTime;
@@ -106,5 +142,14 @@ public class NarrativeSystem : MonoBehaviour
         DrawGuideLine();
         canUpdateLine = true;
         StartCoroutine(visualGuide.MoveTo(narrativeAtoms[0].visualGuideTarget, narrativeAtoms[1], narrativeAtoms[0].delayBefore, narrativeAtoms[0].delayAfter));
+    }
+
+    public void BreakNarrative(NarrativeTrigger trigger)
+    {
+        StopAllCoroutines();
+        var nextIndex = narrativeAtoms.IndexOf(trigger) + 1;
+        trigger.gameObject.SetActive(true);
+        Debug.Log("Next: " + trigger.gameObject.name + " After that: " + narrativeAtoms[nextIndex].gameObject.name);
+        StartCoroutine(visualGuide.MoveTo(trigger.visualGuideTarget, narrativeAtoms[nextIndex], trigger.delayBefore, trigger.delayAfter));
     }
 }

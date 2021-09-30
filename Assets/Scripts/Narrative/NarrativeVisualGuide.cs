@@ -17,6 +17,8 @@ public class NarrativeVisualGuide : MonoBehaviour
         float journey = 0f;
 
         duration = Vector3.Distance(transform.position, target.position) / speed;
+        
+        var tPos = Vector3.zero;
 
         while (journey <= duration)
         {
@@ -26,10 +28,14 @@ public class NarrativeVisualGuide : MonoBehaviour
 
             float curvePercent = animationCurve.Evaluate(percent);
 
-            transform.position = Vector3.LerpUnclamped(startPosition, target.position, curvePercent);
+            tPos = target.position;
+
+            tPos.y = -0.9f;
+
+            transform.position = Vector3.LerpUnclamped(startPosition, tPos, curvePercent);
             yield return null;
         }
-        transform.position = target.position;
+        transform.position = tPos;
 
         yield return new WaitForSecondsRealtime(delayAfter);
     }

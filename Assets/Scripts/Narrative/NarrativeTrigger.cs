@@ -10,6 +10,9 @@ public class NarrativeTrigger : MonoBehaviour
 
     public AudioSource audioSource;
     public Transform visualGuideTarget;
+
+    public bool autopilot = false;
+
     public float delayBefore = 1f;
     public float delayAfter = 1f;
 
@@ -29,10 +32,21 @@ public class NarrativeTrigger : MonoBehaviour
 
     public UnityEvent OnMoveNext = new UnityEvent();
 
-
     private bool isActive = false;
 
     private bool deactivated = false;
+
+    private void OnEnable()
+    {
+        if(isActive && autopilot)
+        {
+            if (!audioSource.isPlaying && playAudio)
+                audioSource.Play();
+            else
+                //if shouldnt play audio, trigger delayed MoveNext event
+                StartCoroutine(TriggerMoveNextWithoutAudio());
+        }
+    }
     private void Update()
     {
         if (!isActive) return;
@@ -59,6 +73,8 @@ public class NarrativeTrigger : MonoBehaviour
             Debug.Log("Player entered: " + nID);
 
             OnPlayerEnter.Invoke();
+
+            if (autopilot) return;
 
             //if should play audio, play
             if (!audioSource.isPlaying && playAudio)

@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/tmi-hmkw-narrative-shrinewomb-001.unity
-    guid: bb2914ae71d34a745a272e3622e03b43
+    path: Assets/Scenes/tmi-hmkw-narrative-shrinewomb-002.unity
+    guid: 8ba78c8751fd4c84eba3ae7a1c680bcb
   m_configObjects: {}
