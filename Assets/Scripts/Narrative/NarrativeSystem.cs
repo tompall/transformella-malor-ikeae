@@ -143,13 +143,20 @@ public class NarrativeSystem : MonoBehaviour
         startAnnotation.SetActive(false);
         narrativeAtoms[0].gameObject.SetActive(true);
         visualGuide.gameObject.SetActive(true);
-        //DrawGuideLine();
+        DrawGuideLine();
         StartCoroutine(visualGuide.MoveTo(narrativeAtoms[0].visualGuideTarget, narrativeAtoms[1], narrativeAtoms[2], narrativeAtoms[0].delayBefore, narrativeAtoms[0].delayAfter, false));
     }
 
     public void BreakNarrative(NarrativeTrigger trigger)
     {
         StopAllCoroutines();
+
+        var tempPos = Camera.main.transform.position;
+
+        tempPos.y = visualGuide.yOffset;
+
+        visualGuide.transform.position = tempPos;
+
         var nextIndex = narrativeAtoms.IndexOf(trigger) + 1;
         trigger.gameObject.SetActive(true);
         Debug.Log("Next: " + trigger.gameObject.name + " After that: " + narrativeAtoms[nextIndex].gameObject.name);

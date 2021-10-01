@@ -13,6 +13,8 @@ public class NarrativeVisualGuide : MonoBehaviour
     
     public int round = 0;
 
+    public float yOffset = -0.5f;
+
     public IEnumerator MoveTo(Transform target, NarrativeTrigger targetAtom, NarrativeTrigger nextAtom, float delayBefore = 0, float delayAfter = 0, bool toFloor = true)
     {
         isMoving = true;
@@ -41,7 +43,7 @@ public class NarrativeVisualGuide : MonoBehaviour
             tPos = target.position;
     
             if(toFloor)
-                tPos.y = -0.9f;
+                tPos.y = yOffset;
 
             transform.position = Vector3.LerpUnclamped(startPosition, tPos, curvePercent);
             yield return null;
