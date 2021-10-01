@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea1c4bed064ca547a7d5f6adaed70e5, type: 3}
+  m_Name: climeworks-location
+  m_EditorClassIdentifier: 
+  localPosX: -7.79
+  localPosY: 0.79
+  localPosZ: -7.63
+  localParentRotx: 0
+  localParentRoty: 0
+  localParentRotz: 0
+  localRotx: 0
+  localRoty: -180.26
+  localRotz: 0
+  localSx: 0.8918505
+  localSy: 0.8918502
+  localSz: 0.8918505

@@ -11,8 +11,6 @@ public class NarrativeTrigger : MonoBehaviour
     public AudioSource audioSource;
     public Transform visualGuideTarget;
 
-    public List<Transform> sequence;
-
     public bool autopilot = false;
 
     public float delayBefore = 1f;
@@ -97,7 +95,7 @@ public class NarrativeTrigger : MonoBehaviour
             if (autopilot) {
                 if (!audioSource.isPlaying && playAudio)
                     audioSource.Play();
-                OnMoveNext.Invoke();
+                //OnMoveNext.Invoke();
                 return;
             } 
 

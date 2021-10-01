@@ -53,7 +53,8 @@ public class NarrativeSystem : MonoBehaviour
                 {
                     visualGuide.speed = next.speedOfOrb;
 
-                    StartCoroutine(visualGuide.MoveTo(next.visualGuideTarget, next, narrativeAtoms[nextIndex+1], next.delayBefore, next.delayAfter));
+                    if(nextIndex+1 < narrativeAtoms.Count)
+                        StartCoroutine(visualGuide.MoveTo(next.visualGuideTarget, next, narrativeAtoms[nextIndex+1], next.delayBefore, next.delayAfter));
                 });
 
                 atom.OnPlayerEnter.AddListener(() =>
@@ -143,8 +144,8 @@ public class NarrativeSystem : MonoBehaviour
         startAnnotation.SetActive(false);
         narrativeAtoms[0].gameObject.SetActive(true);
         visualGuide.gameObject.SetActive(true);
-        DrawGuideLine();
-        StartCoroutine(visualGuide.MoveTo(narrativeAtoms[0].visualGuideTarget, narrativeAtoms[1], narrativeAtoms[2], narrativeAtoms[0].delayBefore, narrativeAtoms[0].delayAfter, false));
+        //DrawGuideLine();
+        //StartCoroutine(visualGuide.MoveTo(narrativeAtoms[0].visualGuideTarget, narrativeAtoms[0], narrativeAtoms[0], narrativeAtoms[0].delayBefore, narrativeAtoms[0].delayAfter, false));
     }
 
     public void BreakNarrative(NarrativeTrigger trigger)
@@ -160,6 +161,6 @@ public class NarrativeSystem : MonoBehaviour
         var nextIndex = narrativeAtoms.IndexOf(trigger) + 1;
         trigger.gameObject.SetActive(true);
         Debug.Log("Next: " + trigger.gameObject.name + " After that: " + narrativeAtoms[nextIndex].gameObject.name);
-        StartCoroutine(visualGuide.MoveTo(trigger.visualGuideTarget, narrativeAtoms[nextIndex], narrativeAtoms[nextIndex+1], trigger.delayBefore, trigger.delayAfter));
+        StartCoroutine(visualGuide.MoveTo(trigger.visualGuideTarget, narrativeAtoms[nextIndex], narrativeAtoms[nextIndex], trigger.delayBefore, trigger.delayAfter));
     }
 }
