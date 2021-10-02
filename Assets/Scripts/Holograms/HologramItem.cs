@@ -32,7 +32,7 @@ public class HologramItem : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         this.transform.localPosition = new Vector3(ItemData.localPosX, ItemData.localPosY, ItemData.localPosZ);
         this.transform.localRotation = Quaternion.Euler(ItemData.localParentRotx, ItemData.localParentRoty, ItemData.localParentRotz);
@@ -44,8 +44,6 @@ public class HologramItem : MonoBehaviour
         {
             this.transform.localScale = new Vector3(ItemData.localSx, ItemData.localSy, ItemData.localSz);
         }
-
-      
     }
 
     // Update is called once per frame
@@ -61,6 +59,15 @@ public class HologramItem : MonoBehaviour
             SaveLocalPos();
             SaveLocalRot();
         }
+    }
+
+    public void ResetDataToEditor()
+    {
+        transform.localPosition = editorPosition;
+        transform.localRotation = editorRotation;
+        if (saveScale) transform.localScale = editorScale;
+        SaveLocalPos();
+        SaveLocalRot();
     }
 
     public void SaveHologramData()

@@ -24,7 +24,8 @@ public class NarrativeTrigger : MonoBehaviour
     public bool playAudioOnTrigger = true;
 
     [SerializeField]
-    private bool deactivateOnExit = true;   
+    private bool deactivateOnExit = true;
+
 
     [SerializeField]
     private TextMesh annotation;
@@ -92,10 +93,16 @@ public class NarrativeTrigger : MonoBehaviour
 
             OnPlayerEnter.Invoke();
 
+            deactivated = true;
+
+            if(autopilot && !playAudio)
+            {
+                OnMoveNext.Invoke();
+            }
+
             if (autopilot) {
                 if (!audioSource.isPlaying && playAudio)
                     audioSource.Play();
-                //OnMoveNext.Invoke();
                 return;
             } 
 

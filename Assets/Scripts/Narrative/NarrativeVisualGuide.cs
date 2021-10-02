@@ -52,7 +52,9 @@ public class NarrativeVisualGuide : MonoBehaviour
 
 
         if (targetAtom.playAudioOnTrigger && !targetAtom.playAudio)
+        {
             targetAtom.gameObject.SetActive(true);
+        }
 
         yield return new WaitForSecondsRealtime(delayAfter);
 

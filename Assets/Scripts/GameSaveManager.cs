@@ -18,7 +18,7 @@ public class GameSaveManager : MonoBehaviour
     public void Awake()
     {
         Debug.Log("Persistent data path: "+Application.persistentDataPath);
-       si.SetHologramitems(dataObjects);
+        si.SetHologramitems(dataObjects);
 
         LoadGame();
 
@@ -42,6 +42,14 @@ public class GameSaveManager : MonoBehaviour
     public bool DoesFileExists()
     {
         return IsSaveFile() && File.Exists(Application.persistentDataPath + jsonPath);
+    }
+
+    public void ResetData()
+    {
+        foreach(var i in FindObjectsOfType<HologramItem>())
+        {
+            i.ResetDataToEditor();
+        }
     }
 
     public void LoadGame()

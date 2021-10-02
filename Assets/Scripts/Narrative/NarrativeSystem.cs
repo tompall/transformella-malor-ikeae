@@ -24,6 +24,8 @@ public class NarrativeSystem : MonoBehaviour
 
     public float lineUpdateFrequency = 1f;
 
+    public float lineStartWombroom = 0.65f;
+
     private bool canUpdateLine = false;
 
     private float totalNarrativePoints;
@@ -107,6 +109,10 @@ public class NarrativeSystem : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyUp(KeyCode.O))
+        {
+            SetLineFromWombToEnd();
+        }
         if (!canUpdateLine) return;
         
         if(lineUpdateCounter >= lineUpdateFrequency)
@@ -139,12 +145,39 @@ public class NarrativeSystem : MonoBehaviour
         }
     }
 
+    public void SetLineFromStartToWomb()
+    {
+        float alpha = 1.0f;
+        var gradient = new Gradient();
+        gradient.SetKeys(
+            new GradientColorKey[] { new GradientColorKey(activeLineColor, 0f), new GradientColorKey(activeLineColor, 1f) },
+            new GradientAlphaKey[] { new GradientAlphaKey(alpha, 0f), new GradientAlphaKey(alpha, lineStartWombroom), new GradientAlphaKey(0f, lineStartWombroom+ 0.01f), new GradientAlphaKey(0, 1f) }
+        );
+
+        line.colorGradient = gradient;
+    }
+
+    public void SetLineFromWombToEnd()
+    {
+        float alpha = 1.0f;
+        var gradient = new Gradient();
+        gradient.SetKeys(
+            new GradientColorKey[] { new GradientColorKey(activeLineColor, 0f), new GradientColorKey(activeLineColor, 1f) },
+            new GradientAlphaKey[] { new GradientAlphaKey(0f, 0f), new GradientAlphaKey(0f, lineStartWombroom), new GradientAlphaKey(1f, lineStartWombroom+0.01f), new GradientAlphaKey(1, 1f) }
+        );
+
+        line.colorGradient = gradient;
+    }
+
+    public void ShowVisualGuide()
+    {
+        visualGuide.gameObject.SetActive(true);
+    }
+
     public void StartNarrative()
     {
         startAnnotation.SetActive(false);
         narrativeAtoms[0].gameObject.SetActive(true);
-        visualGuide.gameObject.SetActive(true);
-        //DrawGuideLine();
         //StartCoroutine(visualGuide.MoveTo(narrativeAtoms[0].visualGuideTarget, narrativeAtoms[0], narrativeAtoms[0], narrativeAtoms[0].delayBefore, narrativeAtoms[0].delayAfter, false));
     }
 
