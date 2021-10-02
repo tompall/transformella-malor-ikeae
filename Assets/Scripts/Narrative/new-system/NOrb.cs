@@ -35,13 +35,16 @@ public class NOrb : MonoBehaviour
 
         if (target.waitForAudio || target.waitForTrigger || target.isAudioTrigger)
         {
-            Debug.Log("Waiting for audio or trigger");
+            Debug.Log("Waiting for audio or trigger " + target.gameObject.name);
+            StopAllCoroutines();
             yield break;
         }
-
-        if (target.nextTrigger != null)
+        else
         {
-            StartCoroutine(moveNext(target.nextTrigger));
-        }
+            if (target.nextTrigger != null)
+            {
+                MoveToNext(target.nextTrigger);
+            }
+        }    
     }
 }

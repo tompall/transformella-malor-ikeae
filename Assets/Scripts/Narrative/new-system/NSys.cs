@@ -18,16 +18,6 @@ public class NSys : MonoBehaviour
             {
                 t.nextTrigger = triggers[index + 1];
                 index++;
-
-                if (t.isAudioTrigger && !t.waitForTrigger)
-                {
-                    //t.OnAudioFinished.AddListener(() => { StartCoroutine(orb.moveNext(t.nextTrigger)); });
-                }
-
-                if (t.waitForTrigger)
-                {
-                    t.OnTriggerEntered.AddListener(() => { StartCoroutine(orb.moveNext(t.nextTrigger)); });
-                }
             }
         }
     }
