@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class NOrb : MonoBehaviour
 {
+    public GameObject visual;
     public void MoveToNext(NTrigger target)
     {
         StartCoroutine(moveNext(target));
@@ -15,6 +16,8 @@ public class NOrb : MonoBehaviour
         float elapsedTime = 0;
         float duration = target.durationOfOrb;
         var currentPos = transform.position;
+
+        var targetPos = Vector3.one;
 
         if (!target.isAudioTrigger)
         {
@@ -28,7 +31,9 @@ public class NOrb : MonoBehaviour
 
         while (elapsedTime < duration)
         {
-            transform.position = Vector3.Lerp(currentPos, target.orbLocation.position, (elapsedTime / duration));
+            targetPos = Vector3.Lerp(currentPos, target.orbLocation.position, (elapsedTime / duration));
+            targetPos.y = -0.5f;
+            transform.position = targetPos;
             elapsedTime += Time.deltaTime;
             yield return 0;
         }
@@ -46,5 +51,10 @@ public class NOrb : MonoBehaviour
                 MoveToNext(target.nextTrigger);
             }
         }    
+    }
+
+    public void ShowVisual(bool on)
+    {
+        visual.SetActive(on);
     }
 }

@@ -296,7 +296,7 @@ BoxCollider:
   m_GameObject: {fileID: 5954548740269829834}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -315,9 +315,9 @@ MonoBehaviour:
   nextTrigger: {fileID: 0}
   audioSource: {fileID: 5954548739183982417}
   orbLocation: {fileID: 5954548739686394910}
+  durationOfOrb: 5
   isAudioTrigger: 1
   isActive: 0
-  isHookedFromEditor: 0
   waitForAudio: 1
   waitForTrigger: 0
   OnAudioFinished:
@@ -326,6 +326,7 @@ MonoBehaviour:
   OnTriggerEntered:
     m_PersistentCalls:
       m_Calls: []
+  firstFrame: 1
 --- !u!1 &5954548740838476131
 GameObject:
   m_ObjectHideFlags: 0

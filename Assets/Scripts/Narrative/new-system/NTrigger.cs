@@ -33,6 +33,7 @@ public class NTrigger : MonoBehaviour
         if (waitForTrigger)
         {
             OnTriggerEntered.Invoke();
+            Debug.Log("Trigger enter invoked: " + gameObject.name);
         }
 
         isActive = true;
