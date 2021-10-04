@@ -10,9 +10,15 @@ public class NSys : MonoBehaviour
 
     public NTrigger startTrigger;
     public GameObject startAnnotation;
-#endregion
 
-#region GUIDE LINE VARIABLES
+    float yOffset = -1f;
+
+    Vector3 linePos = Vector3.one;
+
+    int lineIndex = 0;
+    #endregion
+
+    #region GUIDE LINE VARIABLES
     public LineRenderer line;
     public Color activeLineColor;
     public Color inactiveLineColor;
@@ -55,20 +61,20 @@ public class NSys : MonoBehaviour
 #region GUIDE LINE
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.O))
-        {
-            SetLineFromWombToEnd();
-        }
-        if (!canUpdateLine) return;
+        //if (Input.GetKeyUp(KeyCode.O))
+        //{
+        //    SetLineFromWombToEnd();
+        //}
+        //if (!canUpdateLine) return;
 
-        if (lineUpdateCounter >= lineUpdateFrequency)
-        {
-            DrawGuideLine();
-            lineUpdateCounter = 0;
-            //print("updating line");
-        }
+        //if (lineUpdateCounter >= lineUpdateFrequency)
+        //{
+        //    DrawGuideLine();
+        //    lineUpdateCounter = 0;
+        //    //print("updating line");
+        //}
 
-        lineUpdateCounter += Time.deltaTime;
+        //lineUpdateCounter += Time.deltaTime;
     }
 
     public void DrawGuideLine()
@@ -76,18 +82,18 @@ public class NSys : MonoBehaviour
         canUpdateLine = true;
         line.positionCount = triggers.Count;
 
-        var yOffset = -1f;
+        yOffset = -1f;
 
-        var linePos = Vector3.one;
+        linePos = Vector3.one;
 
-        int index = 0;
+        lineIndex = 0;
         foreach (var trigger in triggers)
         {
             linePos = trigger.orbLocation.position;
 
             linePos.y = yOffset;
-            line.SetPosition(index, linePos);
-            index++;
+            line.SetPosition(lineIndex, linePos);
+            lineIndex++;
         }
     }
 
