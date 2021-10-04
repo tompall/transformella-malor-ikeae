@@ -8,6 +8,7 @@ public class NOrb : MonoBehaviour
     public GameObject visual;
     public void MoveToNext(NTrigger target)
     {
+        StopAllCoroutines();
         StartCoroutine(moveNext(target));
     }
 
@@ -47,7 +48,6 @@ public class NOrb : MonoBehaviour
         if (target.waitForAudio || target.waitForTrigger || target.isAudioTrigger)
         {
             Debug.Log("Waiting for audio or trigger " + target.gameObject.name);
-            StopAllCoroutines();
             yield break;
         }
         else

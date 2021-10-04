@@ -93,3 +93,10 @@ MonoBehaviour:
       id: 0
       description: Toggle Profiler
       axisConstraint: 0
+  - localizationKey: 
+    keyword: Greetings sister
+    keyCode: 109
+    action:
+      id: 0
+      description: Toggle Profiler
+      axisConstraint: 0
