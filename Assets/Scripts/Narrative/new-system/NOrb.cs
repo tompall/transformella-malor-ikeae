@@ -17,6 +17,8 @@ public class NOrb : MonoBehaviour
         float duration = target.durationOfOrb;
         var currentPos = transform.position;
 
+        var newPos = Vector3.one;
+
         var targetPos = Vector3.one;
 
         if (!target.isAudioTrigger)
@@ -31,9 +33,13 @@ public class NOrb : MonoBehaviour
 
         while (elapsedTime < duration)
         {
-            targetPos = Vector3.Lerp(currentPos, target.orbLocation.position, (elapsedTime / duration));
+            targetPos = target.orbLocation.position;
             targetPos.y = -0.5f;
-            transform.position = targetPos;
+
+            newPos = Vector3.Lerp(currentPos, targetPos, (elapsedTime / duration));
+
+            transform.position = newPos;
+            
             elapsedTime += Time.deltaTime;
             yield return 0;
         }

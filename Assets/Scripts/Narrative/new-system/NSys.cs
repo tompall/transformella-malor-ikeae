@@ -8,6 +8,7 @@ public class NSys : MonoBehaviour
     public NOrb visualGuide;
     public List<NTrigger> triggers = new List<NTrigger>();
 
+    public NTrigger startTrigger;
     public GameObject startAnnotation;
 #endregion
 
@@ -41,12 +42,14 @@ public class NSys : MonoBehaviour
         visualGuide.ShowVisual(false);
 
         line.material = new Material(Shader.Find("Sprites/Default"));
+        //DrawGuideLine(); 
+
     }
 
     public void StartNarrative()
     {
         startAnnotation.SetActive(false);
-        triggers[0].gameObject.SetActive(true);
+        startTrigger.gameObject.SetActive(true);
     }
 
 #region GUIDE LINE
