@@ -6,6 +6,11 @@ using UnityEngine.Events;
 public class NOrb : MonoBehaviour
 {
     public GameObject visual;
+    float elapsedTime;
+    float duration;
+    Vector3 currentPos;
+    Vector3 newPos;
+    Vector3 targetPos;
     public void MoveToNext(NTrigger target)
     {
         StopAllCoroutines();
@@ -14,13 +19,13 @@ public class NOrb : MonoBehaviour
 
     public IEnumerator moveNext(NTrigger target)
     {
-        float elapsedTime = 0;
-        float duration = target.durationOfOrb;
-        var currentPos = transform.position;
+        elapsedTime = 0;
+        duration = target.durationOfOrb;
+        currentPos = transform.position;
 
-        var newPos = Vector3.one;
+        newPos = Vector3.one;
 
-        var targetPos = Vector3.one;
+        targetPos = Vector3.one;
 
         if (!target.isAudioTrigger)
         {
