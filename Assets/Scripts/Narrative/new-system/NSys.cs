@@ -41,7 +41,7 @@ public class NSys : MonoBehaviour
     {
         visualGuide.ShowVisual(false);
 
-        line.material = new Material(Shader.Find("Sprites/Default"));
+        //line.material = new Material(Shader.Find("Sprites/Default"));
         //DrawGuideLine(); 
 
     }
