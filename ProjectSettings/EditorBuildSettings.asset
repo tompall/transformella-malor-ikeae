@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/tmi-hmkw-cinematic_001.unity
-    guid: 7146f0932590e424f8c63a0094e19833
+    path: Assets/Scenes/tmi-hmkw-new-narrative-v007.unity
+    guid: 89dfb09c3ba92b1409461a65987c2063
   m_configObjects: {}
