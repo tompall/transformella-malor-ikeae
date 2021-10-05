@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 public class GameSaveManager : MonoBehaviour
 {
     [SerializeField]
-    private string jsonPath = "/game_save/hologram_save.json";
+    private string jsonPath = "/game_save/hmkv_timeline.json";
 
     public List<HologramItemData> dataObjects;
 
