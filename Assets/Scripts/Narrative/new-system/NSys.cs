@@ -79,23 +79,23 @@ public class NSys : MonoBehaviour
 
     public void DrawGuideLine()
     {
-        //canUpdateLine = true;
-        //line.positionCount = triggers.Count;
+        canUpdateLine = true;
+        line.positionCount = triggers.Count;
 
-        //yOffset = -1f;
+        yOffset = -1f;
 
-        //linePos = Vector3.one;
+        linePos = Vector3.one;
 
-        //lineIndex = 0;
+        lineIndex = 0;
 
-        //foreach (var trigger in triggers)
-        //{
-        //    linePos = trigger.orbLocation.position;
+        foreach (var trigger in triggers)
+        {
+            linePos = trigger.orbLocation.position;
 
-        //    linePos.y = yOffset;
-        //    line.SetPosition(lineIndex, linePos);
-        //    lineIndex++;
-        //}
+            linePos.y = yOffset;
+            line.SetPosition(lineIndex, linePos);
+            lineIndex++;
+        }
     }
 
     public void SetLineFromStartToWomb()
