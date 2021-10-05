@@ -87,6 +87,7 @@ public class NSys : MonoBehaviour
         linePos = Vector3.one;
 
         lineIndex = 0;
+
         foreach (var trigger in triggers)
         {
             linePos = trigger.orbLocation.position;
