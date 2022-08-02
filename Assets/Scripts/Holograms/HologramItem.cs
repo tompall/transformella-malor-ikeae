@@ -21,6 +21,8 @@ public class HologramItem : MonoBehaviour
     private Quaternion editorRotation;
     private Vector3 editorScale;
 
+    private Quaternion holoRotation;
+
     //  public Transform rotationControls;
     // public Transform controlParent;
 
@@ -28,6 +30,9 @@ public class HologramItem : MonoBehaviour
     {
         editorPosition = transform.localPosition;
         editorRotation = transform.localRotation;
+
+        // new addition for SHEDHALLE
+        holoRotation = hologramToSave.transform.localRotation;
         editorScale = transform.localScale;
     }
 
@@ -69,6 +74,7 @@ public class HologramItem : MonoBehaviour
             Debug.Log("Reset position attempt");
             transform.localPosition = editorPosition;
             transform.localRotation = editorRotation;
+            hologramToSave.transform.localRotation = holoRotation;
             if (saveScale) transform.localScale = editorScale;
             SaveLocalPos();
             SaveLocalRot();
@@ -79,6 +85,7 @@ public class HologramItem : MonoBehaviour
     {
         transform.localPosition = editorPosition;
         transform.localRotation = editorRotation;
+        hologramToSave.transform.localRotation = holoRotation; 
         if (saveScale) transform.localScale = editorScale;
         SaveLocalPos();
         SaveLocalRot();
