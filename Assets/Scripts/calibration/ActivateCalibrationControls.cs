@@ -20,21 +20,24 @@ public class ActivateCalibrationControls : MonoBehaviour
         {
             foreach (GameObject go in controlHandleObjects)
             {
-                go.SetActive(state);
+                if(go != null)
+                    go.SetActive(state);
             }
         }
         if (manipulatorComponents != null)
         {
             foreach (ObjectManipulator om in manipulatorComponents)
             {
-                om.enabled = state;
+                if (om != null)
+                    om.enabled = state;
             }
         }
         if (rendererComponents != null)
         {
             foreach (MeshRenderer mr in rendererComponents)
             {
-                mr.enabled = state;
+                if(mr != null)
+                    mr.enabled = state;
             }
         }
     }
