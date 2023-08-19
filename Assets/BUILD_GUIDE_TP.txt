@@ -1,0 +1,14 @@
+Transformella development (pre-release) Unity Build routine:
+
+ - SceneManager gameobject update filename of Savefile
+ - Play Game Mode 
+ - Enter Calibration mode
+ - Press 0 (non-numpad) then S (to save)
+ - Build
+
+
+VS STUDIO:
+
+- Check Certificate under Package.appxmanifest (Choose certificate and navigate to unity assets) (current password: transformella)
+- Build & deploy settings
+	- Release & x86 & Device
