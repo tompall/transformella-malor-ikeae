@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class NOrb : MonoBehaviour
 {
     public GameObject visual;
+    public Transform startPositionTarget;
     float elapsedTime;
     float duration;
     Vector3 currentPos;
@@ -66,6 +67,7 @@ public class NOrb : MonoBehaviour
 
     public void ShowVisual(bool on)
     {
+        transform.position = startPositionTarget.position;
         visual.SetActive(on);
     }
 }
