@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/tmi-ljubljana-004.unity
-    guid: 03e1dd37b096cd0408610503cf3aee0a
+    path: Assets/Scenes/tmi-ljubljana-006.unity
+    guid: 2a76490ccc02dc043876b34af6a59c30
   m_configObjects: {}
